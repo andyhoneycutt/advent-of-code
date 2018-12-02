@@ -38,6 +38,8 @@ def has_three(chars):
     return has_x(chars, 3)
 
 
+# thanks codeguru42 for clever implementation
+# https://github.com/codeguru42
 def distance(s, t):
     return sum(0 if x == y else 1 for x, y in zip(s, t))
 
