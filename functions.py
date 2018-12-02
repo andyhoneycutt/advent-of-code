@@ -14,5 +14,25 @@ def str_to_num(s):
 
 
 def ftoi(file):
+    return [str_to_num(l.strip()) for l in read_file(file)]
+
+
+def read_file(file):
     with open(file, 'r') as f:
-        return [str_to_num(l.strip()) for l in f.readlines()]
+        return f.readlines()
+
+
+def has_x(chars, x):
+    s = set(chars)
+    for c in s:
+        if chars.count(c) == x:
+            return 1
+    return 0
+
+
+def has_two(chars):
+    return has_x(chars, 2)
+
+
+def has_three(chars):
+    return has_x(chars, 3)
