@@ -38,33 +38,15 @@ def has_three(chars):
     return has_x(chars, 3)
 
 
+def distance(s, t):
+    return sum(0 if x == y else 1 for x, y in zip(s, t))
+
+
 def get_similar_string(strings):
-    strings.sort()
-    k = len(strings)
-    for i in range(k):
-        if i + 1 > k:
-            continue
+    for s in strings:
+        for t in strings:
+            if s == t:
+                continue
 
-        s = strings[i]
-        t = strings[i + 1]
-
-        if s == t:
-            continue
-
-        s_size = len(s)
-        t_size = len(t)
-
-        if s_size != t_size:
-            continue
-
-        same = 0
-        pos = -1
-
-        for l in range(s_size):
-            if s[l] == t[l]:
-                same += 1
-            else:
-                pos = l
-
-        if same + 1 == s_size:
-            return s[:pos] + s[pos + 1:]
+            if distance(s, t) == 1:
+                return ''.join(x for x, y in zip(s, t) if x == y)
