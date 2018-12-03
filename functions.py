@@ -69,8 +69,8 @@ def parse_claim(line):
     return [int(g) for g in re.match(pattern, line).groups()]
 
 
-def get_fabric(max, val):
-    return [[val for _ in range(max)] for y in range(max)]
+def get_fabric(max_value, val):
+    return [[val for _ in range(max_value)] for y in range(max_value)]
 
 
 def max_of(obj_list, keys):
