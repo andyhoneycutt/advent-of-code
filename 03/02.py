@@ -9,10 +9,8 @@ if __name__ == '__main__':
     _max = functions.max_of(claims, ['x', 'y'])
     fabric = functions.get_fabric(_max, [])
     for c in claims:
-        xa, xb = c['l'], c['x']
-        ya, yb = c['t'], c['y']
-        for x in range(xa, xb):
-            for y in range(ya, yb):
+        for x in range(c['l'], c['x']):
+            for y in range(c['t'], c['y']):
                 fabric[x][y].append(c['i'])
     cids = [c['i'] for c in claims]
     for x in range(_max):
