@@ -1,4 +1,5 @@
 import os
+import re
 
 
 def get_path(file):
@@ -44,3 +45,33 @@ def get_similar_string(strings):
 
             if distance(s, t) == 1:
                 return ''.join(x for x, y in zip(s, t) if x == y)
+
+
+def get_claims(lines):
+    ret = []
+    for l in lines:
+        cid, left, top, width, height = parse_claim(l)
+        claim = {
+            'i': cid,
+            'l': left,
+            't': top,
+            'w': width,
+            'h': height,
+            'x': left + width,
+            'y': top + height,
+        }
+        ret.append(claim)
+    return ret
+
+
+def parse_claim(line):
+    pattern = '#(\d+) @ (\d+),(\d+): (\d+)x(\d+)'
+    return [int(g) for g in re.match(pattern, line).groups()]
+
+
+def get_fabric(max, val):
+    return [[val for _ in range(max)] for y in range(max)]
+
+
+def max_of(obj_list, keys):
+    return max([max([o[k] for o in obj_list]) for k in keys])
