@@ -95,6 +95,7 @@ def get_guard_shifts(shifts):
     for s in shifts:
         if '#' in s[1]:
             current_guard = get_guard_id(s[1])
-            guards[current_guard] = [s[0]]
+            guards[current_guard] = []
+            continue
         guards[current_guard].append(s[0])
     return guards
