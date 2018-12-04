@@ -93,7 +93,7 @@ def get_guard_shifts(shifts):
     guards = {}
     current_guard = None
     for s in shifts:
-        if '#' in s[1]:
+        if '#' in s[1] and s[1] not in guards:
             current_guard = get_guard_id(s[1])
             guards[current_guard] = []
             continue
