@@ -89,13 +89,23 @@ def get_guard_id(shift):
     return re.findall(pattern, shift)[0]
 
 
-def get_guard_shifts(shifts):
-    guards = {}
-    current_guard = None
-    for s in shifts:
-        if '#' in s[1]:
-            current_guard = get_guard_id(s[1])
-            guards[current_guard] = []
-            continue
-        guards[current_guard].append(s[0])
-    return guards
+def get_guard_shifts(shifts_list):
+    _log = [0 for _ in range(59)]
+    log = {}
+    shifts = iter(shifts_list)
+    try:
+        ptr = next(shifts)
+        while True:
+            guard = get_guard_id(ptr[1])
+            if guard not in log:
+                log[guard] = _log.copy()
+            s = next(shifts)
+            while '#' not in s[1]:
+                w = next(shifts)
+                for i in range(s[0].minute, w[0].minute):
+                    log[guard][i] += 1
+                s = next(shifts)
+            ptr = s
+    except StopIteration:
+        pass
+    return log
