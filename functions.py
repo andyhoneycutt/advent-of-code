@@ -1,7 +1,6 @@
 import datetime
 import os
 import re
-import string
 
 
 def get_path(file):
@@ -126,8 +125,7 @@ def remove_repelled(data):
             t = d + c
             data = data.replace(s, '').replace(t, '')
             l = len(data) - 1
-            i = 0
+            i = max(0, i - 1)
         else:
             i += 1
     return data
-
