@@ -28,7 +28,4 @@ if __name__ == '__main__':
                 for cid in fabric[x][y]:
                     fabric_cids.add(cid)
 
-    for cid in cids:
-        if cid not in fabric_cids:
-            print(cid)
-            exit(0)
+    print(fabric_cids ^ cids)
