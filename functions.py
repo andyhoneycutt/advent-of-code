@@ -1,6 +1,7 @@
 import datetime
 import os
 import re
+import string
 
 
 def get_path(file):
@@ -109,3 +110,24 @@ def get_guard_shifts(shifts_list):
     except StopIteration:
         pass
     return log
+
+
+def remove_repelled(data):
+    i = 0
+    l = len(data)
+    while i <= l:
+        if i == l:
+            break;
+        a = ord(data[i])
+        b = ord(data[i + 1])
+        if max(a, b) - 32 == min(a, b):
+            c, d = chr(a), chr(b)
+            s = c + d
+            t = d + c
+            data = data.replace(s, '').replace(t, '')
+            l = len(data) - 1
+            i = 0
+        else:
+            i += 1
+    return len(data)
+
