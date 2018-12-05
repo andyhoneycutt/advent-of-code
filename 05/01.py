@@ -7,4 +7,4 @@ if __name__ == '__main__':
     with open(filename, 'r') as f:
         data = f.read()
         output = functions.remove_repelled(data)
-        print(output)
+        print(len(output))

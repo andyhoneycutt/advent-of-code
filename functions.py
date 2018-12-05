@@ -129,5 +129,5 @@ def remove_repelled(data):
             i = 0
         else:
             i += 1
-    return len(data)
+    return data
 
