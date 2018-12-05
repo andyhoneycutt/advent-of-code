@@ -9,16 +9,25 @@ if __name__ == '__main__':
     _max = functions.max_of(claims, ['x', 'y'])
     fabric = functions.get_fabric(_max, [])
     for c in claims:
-        for x in range(c['l'], c['x']):
-            for y in range(c['t'], c['y']):
-                fabric[x][y].append(c['i'])
-    cids = [c['i'] for c in claims]
+        xa, xb = c['l'], c['x']
+        ya, yb = c['t'], c['y']
+        for x in range(xa, xb):
+            for y in range(ya, yb):
+                if len(fabric[x][y]) == 0:
+                    fabric[x][y] = set()
+                fabric[x][y].add(c['i'])
+
+    cids = set()
+    for c in claims:
+        cids.add(c['i'])
+
+    fabric_cids = set()
     for x in range(_max):
         for y in range(_max):
             if len(fabric[x][y]) > 1:
                 for cid in fabric[x][y]:
-                    try:
-                        cids.remove(cid)
-                    except:
-                        pass
-    print(cids)
+                    fabric_cids.add(cid)
+
+    for cid in cids:
+        if cid not in fabric_cids:
+            print(cid)
