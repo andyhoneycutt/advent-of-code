@@ -31,3 +31,4 @@ if __name__ == '__main__':
     for cid in cids:
         if cid not in fabric_cids:
             print(cid)
+            exit(0)
