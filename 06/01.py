@@ -1,13 +1,8 @@
 import os
 import re
-import sys
 
 import functions
 
-
-# 4146 too high
-# 4116 too high
-# others give 3890
 
 def mhd(a, b):
     x1, y1 = a
@@ -65,7 +60,6 @@ def main(data):
             if c not in remap:
                 remap[c] = 0
             remap[c] += 1
-    print(remap)
     _max = 0
     for k, d in remap.items():
         if d > _max:
@@ -83,11 +77,11 @@ if __name__ == '__main__':
         (100, 50), (100, 100)
     )
     test_two = main(test_data_two)
-    print(test_two)
     assert test_two == 1876
 
     filename = os.path.join(functions.get_path(__file__), 'input.txt')
-    _data = [[int(i) for i in x] for x in [re.findall('\d+', l) for l in functions.read_file(filename)]]
+    _data = [[int(i) for i in x] for x in
+             [re.findall('\d+', l) for l in functions.read_file(filename)]]
     dataset = set()
     for _d in _data:
         dataset.add((_d[0], _d[1]))
