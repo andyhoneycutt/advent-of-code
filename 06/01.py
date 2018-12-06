@@ -64,20 +64,28 @@ def main(data):
     for k, d in remap.items():
         if d > _max:
             _max = d
-    return _max
+
+    safe_distances = []
+    for point, coord_list in _map.items():
+        if point not in infinites:
+            s = sum([c['d'] for c in coord_list])
+            if(s < 10000):
+                safe_distances.append(s)
+
+    return _max, len(safe_distances)
 
 
 if __name__ == '__main__':
     test_data = ((1, 1), (1, 6), (8, 3), (3, 4), (5, 5), (8, 9))
     test = main(test_data)
-    assert test == 17
+    assert test == (17, 69)
 
     test_data_two = (
         (0, 0), (0, 100), (1, 50), (80, 20), (80, 50), (80, 80), (100, 0),
         (100, 50), (100, 100)
     )
     test_two = main(test_data_two)
-    assert test_two == 1876
+    assert test_two == (1876, 10197)
 
     filename = os.path.join(functions.get_path(__file__), 'input.txt')
     _data = [[int(i) for i in x] for x in
