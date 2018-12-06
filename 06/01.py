@@ -28,35 +28,34 @@ def main(data):
     _map = {}
 
     # get all distances for x, y to each specified point
-    for x in range(start_x, size_x):
-        for y in range(start_y, size_y):
-            for d in data:
-                dist = mhd(d, (x, y))
-                if not _map.get((x, y), None):
-                    _map[(x, y)] = []
-                _map[(x, y)].append({'c': d, 'd': dist})
+    for point in grid:
+        for d in data:
+            dist = mhd(d, point)
+            if not _map.get(point, None):
+                _map[point] = []
+            _map[point].append({'c': d, 'd': dist})
 
-    for x in range(start_x, size_x):
-        for y in range(start_y, size_y):
-            if any([x == start_x, y == start_y, x == size_x, y == size_y]):
-                grid[(x, y)] = (-1, -1)
-                continue
+    for point in grid:
+        x, y = point
+        if any([x == start_x, y == start_y, x == size_x, y == size_y]):
+            grid[(x, y)] = (-1, -1)
+            continue
 
-            low = sys.maxsize
-            lowest = (-1, -1)
+        low = sys.maxsize
+        lowest = (-1, -1)
 
-            # current x, y distance to each point
-            c = _map[(x, y)]
+        # current x, y distance to each point
+        c = _map[point]
 
-            # what is grid x, y closest to?
-            for point in c:
-                coord = point['c']
-                dist = point['d']
-                if dist < low:
-                    low = dist
-                    lowest = coord
+        # what is grid x, y closest to?
+        for _point in c:
+            coord = _point['c']
+            dist = _point['d']
+            if dist < low:
+                low = dist
+                lowest = coord
 
-            grid[(x, y)] = lowest
+        grid[point] = lowest
 
     remap = {}
     for x in range(start_x, size_x):
