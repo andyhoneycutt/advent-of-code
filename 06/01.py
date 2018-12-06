@@ -41,20 +41,15 @@ def main(data):
             grid[(x, y)] = (-1, -1)
             continue
 
-        low = sys.maxsize
-        lowest = (-1, -1)
-
         # current x, y distance to each point
         c = _map[point]
 
         # what is grid x, y closest to?
-        for _point in c:
-            coord = _point['c']
-            dist = _point['d']
-            if dist < low:
-                low = dist
-                lowest = coord
-
+        distances = sorted([p['d'] for p in c])
+        if len(distances) > 1 and distances[0] == distances[1]:
+            grid[point] = (-1, -1)
+            continue
+        lowest = [p['c'] for p in c if p['d'] == distances[0]][0]
         grid[point] = lowest
 
     remap = {}
