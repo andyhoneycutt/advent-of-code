@@ -36,11 +36,6 @@ def main(data):
             _map[point].append({'c': d, 'd': dist})
 
     for point in grid:
-        x, y = point
-        if any([x == start_x, y == start_y, x == size_x, y == size_y]):
-            grid[(x, y)] = (-1, -1)
-            continue
-
         # current x, y distance to each point
         c = _map[point]
 
@@ -52,10 +47,19 @@ def main(data):
         lowest = [p['c'] for p in c if p['d'] == distances[0]][0]
         grid[point] = lowest
 
+    infinites = set()
+    for x in range(start_x, size_x):
+        for y in range(start_y, size_y):
+            c = grid[(x, y)]
+            if any([x == start_x, y == start_y, x == size_x, y == size_y]):
+                infinites.add(c)
+
     remap = {}
     for x in range(start_x, size_x):
         for y in range(start_y, size_y):
             c = grid[(x, y)]
+            if c in infinites:
+                continue
             if c == (-1, -1):
                 continue
             if c not in remap:
@@ -73,6 +77,14 @@ if __name__ == '__main__':
     test_data = ((1, 1), (1, 6), (8, 3), (3, 4), (5, 5), (8, 9))
     test = main(test_data)
     assert test == 17
+
+    test_data_two = (
+        (0, 0), (0, 100), (1, 50), (80, 20), (80, 50), (80, 80), (100, 0),
+        (100, 50), (100, 100)
+    )
+    test_two = main(test_data_two)
+    print(test_two)
+    assert test_two == 1876
 
     filename = os.path.join(functions.get_path(__file__), 'input.txt')
     _data = [[int(i) for i in x] for x in [re.findall('\d+', l) for l in functions.read_file(filename)]]
