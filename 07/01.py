@@ -26,10 +26,15 @@ class Step:
         return sorted([self.steps[k.key] for k in self._after],
                       key=lambda x: x.key)
 
+    def __str__(self):
+        return self.key
+
     def __repr__(self):
-        return self.key + '; ' + \
-               ','.join(s.key for s in self._before) + '; ' + \
-               ','.join(s.key for s in self._after)
+        return '<{}: ({}), ({})>'.format(
+            self.key,
+            ','.join(s.key for s in self._before),
+            ','.join(s.key for s in self._after)
+        )
 
 
 def main(step_data):
@@ -49,18 +54,35 @@ def main(step_data):
             b.add_after(step)
 
     current = sorted([s for k, s in steps.items() if len(s.after) == 0],
-                   key=lambda x: x.key)[0]
+                     key=lambda x: x.key)
+    route = []
+    while len(route) < len(steps) and current:
+        c = current.pop(0)
+        route.append(c)
+        possible = set(c.before) | {k for k in current}
+        for k in current:
+            possible |= set(k.before)
+        possible = sorted(possible, key=lambda x: x.key)
+        print(possible)
+        current = possible
 
-    route = [current, ]
-    while current.before:
-        n = current.before[0]
-        route.append(n)
-        current = n
-
-    print(''.join(k.key for k in route))
+    print(''.join(str(k) for k in route))
 
 
 if __name__ == '__main__':
+    data = [
+        'Step C must be finished before step A can begin.',
+        'Step C must be finished before step F can begin.',
+        'Step A must be finished before step B can begin.',
+        'Step A must be finished before step D can begin.',
+        'Step B must be finished before step E can begin.',
+        'Step D must be finished before step E can begin.',
+        'Step F must be finished before step E can begin.',
+    ]
+    test = main(data)
+    assert test == 'CABDFE'
+    exit()
+
     filename = os.path.join(functions.get_path(__file__), 'input.txt')
     data = functions.read_file(filename)
     main(data)
