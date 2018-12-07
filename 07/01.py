@@ -38,8 +38,32 @@ class Step:
 
 
 def main(step_data):
-    steps = {}
+    steps = get_step_dictionary(step_data)
 
+    current = sorted([s for k, s in steps.items() if len(s.after) == 0],
+                     key=lambda x: x.key)
+    last = sorted([s for k, s in steps.items() if len(s.before) == 0],
+                     key=lambda x: x.key)[0]
+    route = []
+    while len(route) < len(steps):
+        ## maybe get a list of all before and a list of all after
+        if len(current) == 1:
+            c = current.pop(0)
+        else:
+            c = [k for k in current if k != last][0]
+            current.pop(current.index(c))
+        route.append(c)
+        possible = set(c.before) | {k for k in current}
+        for k in current:
+            possible |= set(k.before)
+        possible = sorted(possible, key=lambda x: x.key)
+        current = possible
+
+    return ''.join(str(k) for k in route)
+
+
+def get_step_dictionary(step_data):
+    steps = {}
     # setup and determine which step occurs before other steps
     for a, b in functions.get_steps(step_data):
         step = steps.get(a, Step(a, steps=steps))
@@ -53,20 +77,7 @@ def main(step_data):
         for b in step.before:
             b.add_after(step)
 
-    current = sorted([s for k, s in steps.items() if len(s.after) == 0],
-                     key=lambda x: x.key)
-    route = []
-    while len(route) < len(steps) and current:
-        c = current.pop(0)
-        route.append(c)
-        possible = set(c.before) | {k for k in current}
-        for k in current:
-            possible |= set(k.before)
-        possible = sorted(possible, key=lambda x: x.key)
-        print(possible)
-        current = possible
-
-    print(''.join(str(k) for k in route))
+    return steps
 
 
 if __name__ == '__main__':
