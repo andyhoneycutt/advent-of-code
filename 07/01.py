@@ -18,11 +18,13 @@ class Step:
 
     @property
     def before(self):
-        return [self.steps[k.key] for k in self._before]
+        return sorted([self.steps[k.key] for k in self._before],
+                      key=lambda x: x.key)
 
     @property
     def after(self):
-        return [self.steps[k.key] for k in self._after]
+        return sorted([self.steps[k.key] for k in self._after],
+                      key=lambda x: x.key)
 
     def __repr__(self):
         return self.key + '; ' + \
@@ -46,9 +48,16 @@ def main(step_data):
         for b in step.before:
             b.add_after(step)
 
-    start = sorted([s for k, s in steps.items() if len(s.after) == 0],
-                   key=lambda x: x.key)
-    print(start[0])
+    current = sorted([s for k, s in steps.items() if len(s.after) == 0],
+                   key=lambda x: x.key)[0]
+
+    route = [current, ]
+    while current.before:
+        n = current.before[0]
+        route.append(n)
+        current = n
+
+    print(''.join(k.key for k in route))
 
 
 if __name__ == '__main__':
