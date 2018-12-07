@@ -129,3 +129,7 @@ def remove_repelled(data):
         else:
             i += 1
     return data
+
+
+def get_steps(data):
+    return [(l[5], l[-12]) for l in [s.strip() for s in data]]
