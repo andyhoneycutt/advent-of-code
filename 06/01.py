@@ -1,13 +1,8 @@
 import os
 import re
-import sys
 
 import functions
 
-
-# 4146 too high
-# 4116 too high
-# others give 3890
 
 def mhd(a, b):
     x1, y1 = a
@@ -36,51 +31,65 @@ def main(data):
             _map[point].append({'c': d, 'd': dist})
 
     for point in grid:
-        x, y = point
-        if any([x == start_x, y == start_y, x == size_x, y == size_y]):
-            grid[(x, y)] = (-1, -1)
-            continue
-
-        low = sys.maxsize
-        lowest = (-1, -1)
-
         # current x, y distance to each point
         c = _map[point]
 
         # what is grid x, y closest to?
-        for _point in c:
-            coord = _point['c']
-            dist = _point['d']
-            if dist < low:
-                low = dist
-                lowest = coord
-
+        distances = sorted([p['d'] for p in c])
+        if len(distances) > 1 and distances[0] == distances[1]:
+            grid[point] = (-1, -1)
+            continue
+        lowest = [p['c'] for p in c if p['d'] == distances[0]][0]
         grid[point] = lowest
+
+    infinites = set()
+    for x in range(start_x, size_x):
+        for y in range(start_y, size_y):
+            c = grid[(x, y)]
+            if any([x == start_x, y == start_y, x == size_x, y == size_y]):
+                infinites.add(c)
 
     remap = {}
     for x in range(start_x, size_x):
         for y in range(start_y, size_y):
             c = grid[(x, y)]
+            if c in infinites:
+                continue
             if c == (-1, -1):
                 continue
             if c not in remap:
                 remap[c] = 0
             remap[c] += 1
-    print(remap)
     _max = 0
     for k, d in remap.items():
         if d > _max:
             _max = d
-    return _max
+
+    safe_distances = []
+    for point, coord_list in _map.items():
+        if point not in infinites:
+            s = sum([c['d'] for c in coord_list])
+            if(s < 10000):
+                safe_distances.append(s)
+
+    return _max, len(safe_distances)
 
 
 if __name__ == '__main__':
     test_data = ((1, 1), (1, 6), (8, 3), (3, 4), (5, 5), (8, 9))
     test = main(test_data)
-    assert test == 17
+    assert test == (17, 69)
+
+    test_data_two = (
+        (0, 0), (0, 100), (1, 50), (80, 20), (80, 50), (80, 80), (100, 0),
+        (100, 50), (100, 100)
+    )
+    test_two = main(test_data_two)
+    assert test_two == (1876, 10197)
 
     filename = os.path.join(functions.get_path(__file__), 'input.txt')
-    _data = [[int(i) for i in x] for x in [re.findall('\d+', l) for l in functions.read_file(filename)]]
+    _data = [[int(i) for i in x] for x in
+             [re.findall('\d+', l) for l in functions.read_file(filename)]]
     dataset = set()
     for _d in _data:
         dataset.add((_d[0], _d[1]))
