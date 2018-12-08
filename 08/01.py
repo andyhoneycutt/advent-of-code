@@ -19,6 +19,27 @@ class Node:
     def set_meta(self, meta):
         self.meta = meta
 
+    def get_meta(self):
+        return self.meta
+
+    def get_value(self):
+        # if node has no children, its value is the sum of its meta
+        if not self.children:
+            return self.sum_meta()
+
+        # if node has children, meta list is used as indices for
+        # finding which children to score
+        value = 0
+        for index in self.get_meta():
+            if index > 0:
+                # missing children are ignored
+                try:
+                    n = self.children[index - 1]
+                    value += n.get_value()
+                except IndexError:
+                    pass
+        return value
+
     def sum_meta(self):
         return sum(self.meta)
 
@@ -49,8 +70,13 @@ def main(node):
     return meta_sum
 
 
+def main_two(node):
+    return node.get_value()
+
+
 if __name__ == '__main__':
     filename = functions.get_filename(__file__)
     data = functions.read_input(filename)
     node_tree, data = get_tree(data)
     print(main(node_tree))
+    print(main_two(node_tree))
