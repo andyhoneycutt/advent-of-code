@@ -38,6 +38,10 @@ class Step:
         )
 
 
+def time(x):
+    return ord(x) - ord('A') + 61
+
+
 def main(step_data):
     steps = get_step_dictionary(step_data)
 
@@ -58,6 +62,42 @@ def main(step_data):
         current = possible
 
     return ''.join(str(k) for k in route)
+
+
+def main_two(step_data):
+    timer = 0
+    workers = [0 for _ in range(5)]
+    steps = get_step_dictionary(step_data)
+
+    current = sorted([s for k, s in steps.items() if len(s.after) == 0],
+                     key=lambda x: x.key)
+    route = []
+    while current or any([w > 0 for w in workers]):
+        current = [
+            k for k in current
+            if len([c for c in k.after if c in route]) == len(k.after)
+        ]
+
+        added = set()
+        for i in range(5):
+            v = max(0, workers[i] - 1)
+            workers[i] = v
+            if workers[i] == 0 and current:
+                c = current.pop(0)
+                workers[i] = time(c.key)
+                route.append(c)
+                added.add(c)
+
+        possible = {k for k in current}
+        for k in added:
+            possible |= set(k.before)
+        for k in current:
+            possible |= set(k.before)
+        possible = sorted(possible, key=lambda x: x.key)
+        current = possible
+
+        timer += 1
+    return timer
 
 
 def get_step_dictionary(step_data):
@@ -96,3 +136,5 @@ if __name__ == '__main__':
     answer = main(data)
     assert answer not in ['BKCJMSDVFGHQRXFYZOAULPIEWT', ]
     print(answer)
+
+    print(main_two(data))
