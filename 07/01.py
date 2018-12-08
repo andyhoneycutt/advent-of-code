@@ -1,3 +1,4 @@
+import itertools
 import os
 
 import functions
@@ -42,16 +43,13 @@ def main(step_data):
 
     current = sorted([s for k, s in steps.items() if len(s.after) == 0],
                      key=lambda x: x.key)
-    last = sorted([s for k, s in steps.items() if len(s.before) == 0],
-                     key=lambda x: x.key)[0]
     route = []
     while len(route) < len(steps):
-        ## maybe get a list of all before and a list of all after
-        if len(current) == 1:
-            c = current.pop(0)
-        else:
-            c = [k for k in current if k != last][0]
-            current.pop(current.index(c))
+        current = [
+            k for k in current
+            if len([c for c in k.after if c in route]) == len(k.after)
+        ]
+        c = current.pop(0)
         route.append(c)
         possible = set(c.before) | {k for k in current}
         for k in current:
@@ -92,8 +90,9 @@ if __name__ == '__main__':
     ]
     test = main(data)
     assert test == 'CABDFE'
-    exit()
 
     filename = os.path.join(functions.get_path(__file__), 'input.txt')
     data = functions.read_file(filename)
-    main(data)
+    answer = main(data)
+    assert answer not in ['BKCJMSDVFGHQRXFYZOAULPIEWT', ]
+    print(answer)
