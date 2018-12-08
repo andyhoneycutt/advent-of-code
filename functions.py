@@ -3,8 +3,17 @@ import os
 import re
 
 
+def get_filename(file):
+    return os.path.join(get_path(file), 'input.txt')
+
+
 def get_path(file):
     return os.path.dirname(os.path.realpath(file))
+
+
+def read_input(filename):
+    with open(filename) as f:
+        return [int(c) for c in f.read().strip().split()]
 
 
 def ftoi(file):
