@@ -20,7 +20,7 @@ def get_value(mode, inp, memory):
     return inp
 
 
-def run(codes):
+def run(codes, user_input):
     i = 0
     diagnostic = []
     while codes[i] != 99:
@@ -29,31 +29,54 @@ def run(codes):
 
         # add
         if opcode == 1:
-            a = get_value(mode1, codes[i+1], codes)
-            b = get_value(mode2, codes[i+2], codes)
+            a = get_value(mode1, codes[i + 1], codes)
+            b = get_value(mode2, codes[i + 2], codes)
             codes[d] = a + b
             i += 4
         # multiply
         elif opcode == 2:
-            a = get_value(mode1, codes[i+1], codes)
-            b = get_value(mode2, codes[i+2], codes)
+            a = get_value(mode1, codes[i + 1], codes)
+            b = get_value(mode2, codes[i + 2], codes)
             codes[d] = a * b
             i += 4
         # provide input
         elif opcode == 3:
-            inp = 1
-            codes[codes[i+1]] = inp
+            codes[codes[i + 1]] = user_input
             i += 2
         # output value
         elif opcode == 4:
-            a = codes[i+1]
+            diagnostic.append(str(get_value(mode1, codes[i + 1], codes)))
             i += 2
-            diagnostic.append(str(get_value(mode1, a, codes)))
-    print(int(''.join(diagnostic)))
+        # jump if true
+        elif opcode == 5:
+            a = get_value(mode1, codes[i + 1], codes)
+            b = get_value(mode2, codes[i + 2], codes)
+            i = a and b or i + 3
+        # jump if false
+        elif opcode == 6:
+            a = get_value(mode1, codes[i + 1], codes)
+            b = get_value(mode2, codes[i + 2], codes)
+            i = not a and b or i + 3
+        # less than
+        elif opcode == 7:
+            a = get_value(mode1, codes[i + 1], codes)
+            b = get_value(mode2, codes[i + 2], codes)
+            codes[d] = a < b and 1 or 0
+            i += 4
+        # equal
+        elif opcode == 8:
+            a = get_value(mode1, codes[i + 1], codes)
+            b = get_value(mode2, codes[i + 2], codes)
+            codes[d] = a == b and 1 or 0
+            i += 4
+
+    val = int(''.join(diagnostic))
+    print(val)
+    return val
 
 
 def part_one(inst):
-    run(inst)
+    run(inst, 1)
 
 
 if __name__ == '__main__':
