@@ -22,31 +22,34 @@ def get_value(mode, inp, memory):
 
 def run(codes):
     i = 0
+    diagnostic = []
     while codes[i] != 99:
-        mode3, mode2, mode1, opcode = parse_op(codes[i])
-        a = get_value(mode1, codes[i+1], codes)
-        b = get_value(mode2, codes[i+2], codes)
-        d = get_value(mode3, codes[i+3], codes)
+        _, mode2, mode1, opcode = parse_op(codes[i])
+        d = codes[i + 3]
 
         # add
         if opcode == 1:
+            a = get_value(mode1, codes[i+1], codes)
+            b = get_value(mode2, codes[i+2], codes)
             codes[d] = a + b
             i += 4
         # multiply
         elif opcode == 2:
-            d = codes[i+3]
+            a = get_value(mode1, codes[i+1], codes)
+            b = get_value(mode2, codes[i+2], codes)
             codes[d] = a * b
             i += 4
         # provide input
         elif opcode == 3:
             inp = 1
-            codes[a] = inp
+            codes[codes[i+1]] = inp
             i += 2
         # output value
         elif opcode == 4:
             a = codes[i+1]
             i += 2
-            print(get_value(mode1, a, codes), end='')
+            diagnostic.append(str(get_value(mode1, a, codes)))
+    print(int(''.join(diagnostic)))
 
 
 def part_one(inst):
@@ -54,5 +57,5 @@ def part_one(inst):
 
 
 if __name__ == '__main__':
-    instructions = [int(i) for i in read_input('input.txt').split(',')]
+    instructions = input_to_codes(read_input('input.txt'))
     part_one(instructions)
