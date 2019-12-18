@@ -8,9 +8,9 @@ def get_orbits(path):
     return orbs
 
 
-def get_len(planet, length, orbs):
+def get_len(origin, length, orbs):
     try:
-        return sum(get_len(p, length + 1, orbs) for p in orbs[planet]) + length
+        return sum(get_len(p, length + 1, orbs) for p in orbs[origin]) + length
     except KeyError:
         return length
 
