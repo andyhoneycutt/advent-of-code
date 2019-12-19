@@ -45,10 +45,14 @@ class PartTwoTest(TestCase):
 
     def test_get_thruster_signal(self):
         self.assertEqual(
-            139629729, get_thruster_signal(self.a, [9, 8, 7, 6, 5])
+            139629729, get_thruster_signal(
+                self.a, [9, 8, 7, 6, 5], feedback=True
+            )
         )
         self.assertEqual(
-            18216, get_thruster_signal(self.b, [9, 7, 8, 5, 6])
+            18216, get_thruster_signal(
+                self.b, [9, 7, 8, 5, 6], feedback=True
+            ),
         )
 
     pass

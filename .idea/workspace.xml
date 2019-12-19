@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e07f141-cb3b-4cae-8fcd-e89ae6077253" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2019/day07/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day07/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2019/day07/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day07/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019/intcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/intcode.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
       <recent name="$PROJECT_DIR$/2019" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for tests.PartOneTests">
+  <component name="RunManager" selected="Python tests.Unittests for tests.PartTwoTest.test_get_thruster_signal">
     <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="advent-of-code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,8 +161,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for tests.PartOneTests" />
         <item itemvalue="Python tests.Unittests for tests.PartTwoTest.test_get_thruster_signal" />
+        <item itemvalue="Python tests.Unittests for tests.PartOneTests" />
         <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_get_thruster_signal" />
         <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_get_max_thruster_signal" />
         <item itemvalue="Python.main (2)" />
@@ -198,7 +198,7 @@
       <workItem from="1576677365793" duration="6087000" />
       <workItem from="1576700359943" duration="1284000" />
       <workItem from="1576703196647" duration="8385000" />
-      <workItem from="1576720297222" duration="3909000" />
+      <workItem from="1576720297222" duration="6111000" />
     </task>
     <task id="LOCAL-00001" summary="update project">
       <created>1543947249783</created>
@@ -389,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576723331590</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="begin part 2, require signal range as input">
+      <created>1576724224781</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1576724224781</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +405,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="fix for sane running time" />
     <MESSAGE value="use set operations" />
     <MESSAGE value="passing test for day 6, but failing run" />
     <MESSAGE value="clean up a little" />
@@ -423,17 +429,18 @@
     <MESSAGE value="run part 1" />
     <MESSAGE value="fix scope issue" />
     <MESSAGE value="fix initialization, allow range input for sequence generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix initialization, allow range input for sequence generation" />
+    <MESSAGE value="begin part 2, require signal range as input" />
+    <option name="LAST_COMMIT_MESSAGE" value="begin part 2, require signal range as input" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="274" width="436" height="556" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1576720710304">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="770" y="274" width="436" height="556" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576720710304" />
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576723331516">
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576724224691">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576723331516" />
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576724224691" />
     <state x="167" y="125" width="1653" height="855" key="DiffContextDialog" timestamp="1576722532946">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -442,38 +449,38 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="771" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576720698252" />
-    <state width="1807" height="277" key="GridCell.Tab.0.bottom" timestamp="1576724209751">
+    <state width="1807" height="343" key="GridCell.Tab.0.bottom" timestamp="1576726419917">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="277" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576724209751" />
-    <state width="1807" height="277" key="GridCell.Tab.0.center" timestamp="1576724209751">
+    <state width="1807" height="343" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576726419917" />
+    <state width="1807" height="343" key="GridCell.Tab.0.center" timestamp="1576726419917">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="277" key="GridCell.Tab.0.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576724209751" />
-    <state width="1807" height="277" key="GridCell.Tab.0.left" timestamp="1576724209751">
+    <state width="1807" height="343" key="GridCell.Tab.0.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576726419917" />
+    <state width="1807" height="343" key="GridCell.Tab.0.left" timestamp="1576726419917">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="277" key="GridCell.Tab.0.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576724209751" />
-    <state width="1807" height="277" key="GridCell.Tab.0.right" timestamp="1576724209751">
+    <state width="1807" height="343" key="GridCell.Tab.0.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576726419917" />
+    <state width="1807" height="343" key="GridCell.Tab.0.right" timestamp="1576726419917">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="277" key="GridCell.Tab.0.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576724209751" />
-    <state width="1807" height="343" key="GridCell.Tab.1.bottom" timestamp="1576722802160">
+    <state width="1807" height="343" key="GridCell.Tab.0.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576726419917" />
+    <state width="1807" height="343" key="GridCell.Tab.1.bottom" timestamp="1576726412184">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576722802160" />
-    <state width="1807" height="343" key="GridCell.Tab.1.center" timestamp="1576722802160">
+    <state width="1807" height="343" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576726412184" />
+    <state width="1807" height="343" key="GridCell.Tab.1.center" timestamp="1576726412184">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.1.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576722802160" />
-    <state width="1807" height="343" key="GridCell.Tab.1.left" timestamp="1576722802160">
+    <state width="1807" height="343" key="GridCell.Tab.1.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576726412184" />
+    <state width="1807" height="343" key="GridCell.Tab.1.left" timestamp="1576726412184">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.1.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576722802160" />
-    <state width="1807" height="343" key="GridCell.Tab.1.right" timestamp="1576722802160">
+    <state width="1807" height="343" key="GridCell.Tab.1.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576726412184" />
+    <state width="1807" height="343" key="GridCell.Tab.1.right" timestamp="1576726412184">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.1.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576722802160" />
+    <state width="1807" height="343" key="GridCell.Tab.1.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576726412184" />
     <state x="482" y="187" width="1024" height="845" key="SettingsEditor" timestamp="1576723577256">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -496,8 +503,24 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/2019/day07/main.py</url>
-          <line>28</line>
+          <line>40</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <condition expression="val == 139629729" language="Python" />
+          <url>file://$PROJECT_DIR$/2019/intcode.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/2019/day07/main.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/2019/intcode.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -510,6 +533,10 @@
         <watch expression="'SAN' in v" language="Python" />
         <watch expression="hasattr(user_input, '__iter__')" language="Python" />
         <watch expression="dir(user_input)" language="Python" />
+        <watch expression="list(p)" language="Python" />
+        <watch expression="val == 139629729" language="Python" />
+        <watch expression="99 in amps[1]" language="Python" />
+        <watch expression="list(user_input)" language="Python" />
       </configuration>
       <configuration name="PythonConfigurationType">
         <watch expression="nodes" language="Python" />
@@ -533,10 +560,10 @@
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartTwoTest_test_sample.coverage" NAME="Unittests for tests.PartTwoTest.test_sample Coverage Results" MODIFIED="1576710716745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day06" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_large_instruction.coverage" NAME="Unittests for tests.PartOneTests.test_large_instruction Coverage Results" MODIFIED="1576705935479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day05" />
     <SUITE FILE_PATH="coverage/advent_of_code$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1576710775713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day06" />
-    <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartTwoTest_test_get_thruster_signal.coverage" NAME="Unittests for tests.PartTwoTest.test_get_thruster_signal Coverage Results" MODIFIED="1576723681540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
+    <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartTwoTest_test_get_thruster_signal.coverage" NAME="Unittests for tests.PartTwoTest.test_get_thruster_signal Coverage Results" MODIFIED="1576726411593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_position_mode.coverage" NAME="Unittests for tests.PartOneTests.test_position_mode Coverage Results" MODIFIED="1576705585764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day05" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_get_max_thruster_signal.coverage" NAME="Unittests for tests.PartOneTests.test_get_max_thruster_signal Coverage Results" MODIFIED="1576723185425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
-    <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests.coverage" NAME="Unittests for tests.PartOneTests Coverage Results" MODIFIED="1576724209741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
+    <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests.coverage" NAME="Unittests for tests.PartOneTests Coverage Results" MODIFIED="1576725877112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
     <SUITE FILE_PATH="coverage/advent_of_code$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1576723091535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
     <SUITE FILE_PATH="coverage/advent_of_code$scratch_7.coverage" NAME="scratch_7 Coverage Results" MODIFIED="1576704787921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/advent_of_code$main.coverage" NAME="main Coverage Results" MODIFIED="1576720722798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day05" />

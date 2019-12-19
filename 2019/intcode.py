@@ -43,7 +43,10 @@ def run(codes, user_input):
             i += 4
         # provide input
         elif opcode == 3:
-            codes[codes[i + 1]] = next(user_input)
+            try:
+                codes[codes[i + 1]] = next(user_input)
+            except StopIteration:
+                return diagnostic and int(''.join(diagnostic)) or 0
             i += 2
         # output value
         elif opcode == 4:
