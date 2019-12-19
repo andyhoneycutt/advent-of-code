@@ -39,14 +39,14 @@ def get_layer_fewest_entry(layers, entry=0):
             return i
 
 
-def get_layer_multiply_entries(layer, a, b):
+def multiply_entries(layer, a, b):
     return get_layer_count_entry(layer, a) * get_layer_count_entry(layer, b)
 
 
 @util.time_fn
 def part_one(layers):
     index = get_layer_fewest_entry(layers, 0)
-    result = get_layer_multiply_entries(layers[index], 1, 2)
+    result = multiply_entries(layers[index], 1, 2)
     print(result)
     return result
 
