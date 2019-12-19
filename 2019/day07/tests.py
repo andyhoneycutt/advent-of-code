@@ -44,7 +44,7 @@ class PartTwoTest(TestCase):
             1005, 56, 6, 99, 0, 0, 0, 0, 10
         ]
 
-    def test_get_thruster_signal(self):
+    def test_get_thruster_signal_feedback(self):
         self.assertEqual(
             139629729, get_thruster_signal_feedback(self.a, [9, 8, 7, 6, 5]),
         )

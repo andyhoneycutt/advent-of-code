@@ -52,7 +52,7 @@ def run_signal_to_halt(sequence: list, signal_range: range) -> int:
     signals = get_signals(signal_range)
     max_signal = 0
     for phase in signals:
-        signal = get_thruster_signal(sequence, phase)
+        signal = get_thruster_signal_feedback(sequence, phase)
         max_signal = signal > max_signal and signal or max_signal
     return max_signal
 
