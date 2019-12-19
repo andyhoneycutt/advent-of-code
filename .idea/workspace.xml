@@ -68,7 +68,7 @@
       <recent name="$PROJECT_DIR$/2018" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for tests.PartOneTests">
+  <component name="RunManager" selected="Python.main">
     <configuration name="layne" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="advent-of-code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,8 +167,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for tests.PartOneTests" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Unittests for tests.PartOneTests" />
         <item itemvalue="Python.layne" />
         <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_get_layer_multiply_entries" />
         <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_get_layer_count_entry" />
@@ -532,10 +532,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="861" y="256" width="254" height="593" key="#xdebugger.evaluate/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576727506624" />
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576768588280">
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576768784028">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576768588280" />
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576768784028" />
     <state x="167" y="125" width="1653" height="855" key="DiffContextDialog" timestamp="1576722532946">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -544,22 +544,22 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="771" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576765263981" />
-    <state width="1807" height="277" key="GridCell.Tab.0.bottom" timestamp="1576768774912">
+    <state width="1807" height="277" key="GridCell.Tab.0.bottom" timestamp="1576768807395">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="277" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576768774912" />
-    <state width="1807" height="277" key="GridCell.Tab.0.center" timestamp="1576768774911">
+    <state width="1807" height="277" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576768807395" />
+    <state width="1807" height="277" key="GridCell.Tab.0.center" timestamp="1576768807394">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="277" key="GridCell.Tab.0.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576768774911" />
-    <state width="1807" height="277" key="GridCell.Tab.0.left" timestamp="1576768774911">
+    <state width="1807" height="277" key="GridCell.Tab.0.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576768807394" />
+    <state width="1807" height="277" key="GridCell.Tab.0.left" timestamp="1576768807394">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="277" key="GridCell.Tab.0.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576768774911" />
-    <state width="1807" height="277" key="GridCell.Tab.0.right" timestamp="1576768774911">
+    <state width="1807" height="277" key="GridCell.Tab.0.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576768807394" />
+    <state width="1807" height="277" key="GridCell.Tab.0.right" timestamp="1576768807394">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="277" key="GridCell.Tab.0.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576768774911" />
+    <state width="1807" height="277" key="GridCell.Tab.0.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576768807394" />
     <state width="1807" height="343" key="GridCell.Tab.1.bottom" timestamp="1576766927390">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -584,10 +584,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576723577256" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576768590591">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576768785769">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576768590591" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576768785769" />
     <state width="926" height="527" key="XDebugger.FullValuePopup" timestamp="1576710793951">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -649,7 +649,7 @@
     <SUITE FILE_PATH="coverage/advent_of_code$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1576723091535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
     <SUITE FILE_PATH="coverage/advent_of_code$scratch_7.coverage" NAME="scratch_7 Coverage Results" MODIFIED="1576704787921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_get_thruster_signal.coverage" NAME="Unittests for tests.PartOneTests.test_get_thruster_signal Coverage Results" MODIFIED="1576723188131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
-    <SUITE FILE_PATH="coverage/advent_of_code$main.coverage" NAME="main Coverage Results" MODIFIED="1576768554072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day08" />
+    <SUITE FILE_PATH="coverage/advent_of_code$main.coverage" NAME="main Coverage Results" MODIFIED="1576768807379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day08" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_get_layer_count_entry.coverage" NAME="Unittests for tests.PartOneTests.test_get_layer_count_entry Coverage Results" MODIFIED="1576767551413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day08" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_immediate_mode.coverage" NAME="Unittests for tests.PartOneTests.test_immediate_mode Coverage Results" MODIFIED="1576705363484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day05" />
   </component>

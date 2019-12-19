@@ -13,5 +13,4 @@ def time_fn(fn):
         e = time.time() - t
         print(f"{fn.__name__}: {e:2.6f}")
         return result
-
     return _t
