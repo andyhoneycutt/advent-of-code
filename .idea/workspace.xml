@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e07f141-cb3b-4cae-8fcd-e89ae6077253" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/2019/day08/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019/day08/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019/day08/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019/day08/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/day07/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day07/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/day07/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day07/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/intcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/intcode.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543947414976" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/2019/intcode.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/2019" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,11 +63,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/2018" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/2019" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/2018" />
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Unittests for tests.PartTwoTest.test_get_thruster_signal_feedback">
@@ -192,7 +193,7 @@
       <workItem from="1576700359943" duration="1284000" />
       <workItem from="1576703196647" duration="8385000" />
       <workItem from="1576720297222" duration="8025000" />
-      <workItem from="1576764440525" duration="518000" />
+      <workItem from="1576764440525" duration="658000" />
     </task>
     <task id="LOCAL-00001" summary="update project">
       <created>1543947249783</created>
@@ -404,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576727941752</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="changes to main signal function">
+      <created>1576765005563</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1576765005563</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +421,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="clean up a little" />
     <MESSAGE value="begin day 7" />
     <MESSAGE value="one pass" />
     <MESSAGE value="day 7 part 1 solution" />
@@ -438,7 +445,8 @@
     <MESSAGE value="begin part 2, require signal range as input" />
     <MESSAGE value="set up tests for part 2" />
     <MESSAGE value="broken commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="broken commit" />
+    <MESSAGE value="changes to main signal function" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes to main signal function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="274" width="436" height="556" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1576720710304">
@@ -449,10 +457,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="861" y="256" width="254" height="593" key="#xdebugger.evaluate/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576727506624" />
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576727941681">
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576765005416">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576727941681" />
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576765005416" />
     <state x="167" y="125" width="1653" height="855" key="DiffContextDialog" timestamp="1576722532946">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -520,7 +528,7 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <condition expression="val == 139629729" language="Python" />
           <url>file://$PROJECT_DIR$/2019/intcode.py</url>
-          <line>80</line>
+          <line>79</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
