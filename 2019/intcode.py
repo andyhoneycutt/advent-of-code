@@ -23,6 +23,8 @@ def get_value(mode, inp, memory):
 def run(codes, user_input):
     i = 0
     diagnostic = []
+    if not hasattr(user_input, '__next__'):
+        user_input = iter([user_input])
     while codes[i] != 99:
         _, mode2, mode1, opcode = parse_op(codes[i])
         d = codes[i + 3]
@@ -41,7 +43,7 @@ def run(codes, user_input):
             i += 4
         # provide input
         elif opcode == 3:
-            codes[codes[i + 1]] = user_input
+            codes[codes[i + 1]] = next(user_input)
             i += 2
         # output value
         elif opcode == 4:

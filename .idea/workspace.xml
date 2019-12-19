@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e07f141-cb3b-4cae-8fcd-e89ae6077253" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/2019/day07/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2019/day07/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2019/day07/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2019/day07/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019/day07/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day07/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019/day07/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day07/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019/intcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/intcode.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,7 @@
       <recent name="$PROJECT_DIR$/2019" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python tests.Unittests for tests.PartOneTests.test_get_max_thruster_signal">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="advent-of-code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -115,65 +114,65 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for tests.PartOneTests.test_sample" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for tests.PartOneTests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2019/day06" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2019/day07" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.PartOneTests.test_sample&quot;" />
+      <option name="_new_target" value="&quot;tests.PartOneTests&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for tests.PartTwoTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for tests.PartOneTests.test_get_max_thruster_signal" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2019/day06" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2019/day07" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.PartTwoTest&quot;" />
+      <option name="_new_target" value="&quot;tests.PartOneTests.test_get_max_thruster_signal&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for tests.PartTwoTest.test_sample" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for tests.PartOneTests.test_get_thruster_signal" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2019/day06" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2019/day07" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.PartTwoTest.test_sample&quot;" />
+      <option name="_new_target" value="&quot;tests.PartOneTests.test_get_thruster_signal&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python.main (1)" />
-      <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_sample" />
-      <item itemvalue="Python tests.Unittests for tests.PartTwoTest" />
-      <item itemvalue="Python tests.Unittests for tests.PartTwoTest.test_sample" />
+      <item itemvalue="Python tests.Unittests for tests.PartOneTests" />
+      <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_get_max_thruster_signal" />
+      <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_get_thruster_signal" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_get_max_thruster_signal" />
+        <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_get_thruster_signal" />
+        <item itemvalue="Python tests.Unittests for tests.PartOneTests" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python tests.Unittests for tests.PartTwoTest.test_sample" />
-        <item itemvalue="Python tests.Unittests for tests.PartTwoTest" />
-        <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_sample" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +205,7 @@
       <workItem from="1576677365793" duration="6087000" />
       <workItem from="1576700359943" duration="1284000" />
       <workItem from="1576703196647" duration="8385000" />
-      <workItem from="1576720297222" duration="323000" />
+      <workItem from="1576720297222" duration="2689000" />
     </task>
     <task id="LOCAL-00001" summary="update project">
       <created>1543947249783</created>
@@ -355,7 +354,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576710901092</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add day 7">
+      <created>1576720629317</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1576720629317</updated>
+    </task>
+    <task id="LOCAL-00023" summary="move intcode to module">
+      <created>1576720732170</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1576720732170</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,53 +397,59 @@
     <MESSAGE value="add day 6 part 1" />
     <MESSAGE value="rename var" />
     <MESSAGE value="add part two with testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="add part two with testing" />
+    <MESSAGE value="add day 7" />
+    <MESSAGE value="move intcode to module" />
+    <option name="LAST_COMMIT_MESSAGE" value="move intcode to module" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="274" width="436" height="556" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1576720710304">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="770" y="274" width="436" height="556" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576720710304" />
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576720629264">
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576720732083">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576720629264" />
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576720732083" />
+    <state x="167" y="125" width="1653" height="855" key="DiffContextDialog" timestamp="1576722532946">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="167" y="125" width="1653" height="855" key="DiffContextDialog/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576722532946" />
     <state x="771" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576720698252">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="771" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576720698252" />
-    <state width="1807" height="343" key="GridCell.Tab.0.bottom" timestamp="1576712247792">
+    <state width="1807" height="277" key="GridCell.Tab.0.bottom" timestamp="1576722990014">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576712247792" />
-    <state width="1807" height="343" key="GridCell.Tab.0.center" timestamp="1576712247792">
+    <state width="1807" height="277" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576722990014" />
+    <state width="1807" height="277" key="GridCell.Tab.0.center" timestamp="1576722990014">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.0.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576712247792" />
-    <state width="1807" height="343" key="GridCell.Tab.0.left" timestamp="1576712247792">
+    <state width="1807" height="277" key="GridCell.Tab.0.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576722990014" />
+    <state width="1807" height="277" key="GridCell.Tab.0.left" timestamp="1576722990014">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.0.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576712247792" />
-    <state width="1807" height="343" key="GridCell.Tab.0.right" timestamp="1576712247792">
+    <state width="1807" height="277" key="GridCell.Tab.0.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576722990014" />
+    <state width="1807" height="277" key="GridCell.Tab.0.right" timestamp="1576722990014">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.0.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576712247792" />
-    <state width="1807" height="343" key="GridCell.Tab.1.bottom" timestamp="1576712247793">
+    <state width="1807" height="277" key="GridCell.Tab.0.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576722990014" />
+    <state width="1807" height="343" key="GridCell.Tab.1.bottom" timestamp="1576722802160">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576712247793" />
-    <state width="1807" height="343" key="GridCell.Tab.1.center" timestamp="1576712247793">
+    <state width="1807" height="343" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576722802160" />
+    <state width="1807" height="343" key="GridCell.Tab.1.center" timestamp="1576722802160">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.1.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576712247793" />
-    <state width="1807" height="343" key="GridCell.Tab.1.left" timestamp="1576712247792">
+    <state width="1807" height="343" key="GridCell.Tab.1.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576722802160" />
+    <state width="1807" height="343" key="GridCell.Tab.1.left" timestamp="1576722802160">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.1.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576712247792" />
-    <state width="1807" height="343" key="GridCell.Tab.1.right" timestamp="1576712247793">
+    <state width="1807" height="343" key="GridCell.Tab.1.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576722802160" />
+    <state width="1807" height="343" key="GridCell.Tab.1.right" timestamp="1576722802160">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.1.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576712247793" />
+    <state width="1807" height="343" key="GridCell.Tab.1.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576722802160" />
     <state x="482" y="187" width="1024" height="845" key="SettingsEditor" timestamp="1576704091521">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -449,6 +468,15 @@
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576711470568" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/2019/day07/main.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
         <watch expression="get_value(mode1, a, codes)" language="Python" />
@@ -456,6 +484,8 @@
         <watch expression="v" language="Python" />
         <watch expression="satellite in v" language="Python" />
         <watch expression="'SAN' in v" language="Python" />
+        <watch expression="hasattr(user_input, '__iter__')" language="Python" />
+        <watch expression="dir(user_input)" language="Python" />
       </configuration>
       <configuration name="PythonConfigurationType">
         <watch expression="nodes" language="Python" />
@@ -473,16 +503,18 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests.coverage" NAME="Unittests for tests.PartOneTests Coverage Results" MODIFIED="1576705276028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day05" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_sample.coverage" NAME="Unittests for tests.PartOneTests.test_sample Coverage Results" MODIFIED="1576708513393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day06" />
     <SUITE FILE_PATH="coverage/advent_of_code$layne.coverage" NAME="layne Coverage Results" MODIFIED="1576682645123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day05" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartTwoTest.coverage" NAME="Unittests for tests.PartTwoTest Coverage Results" MODIFIED="1576708986113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day06" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartTwoTest_test_sample.coverage" NAME="Unittests for tests.PartTwoTest.test_sample Coverage Results" MODIFIED="1576710716745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day06" />
-    <SUITE FILE_PATH="coverage/advent_of_code$scratch_7.coverage" NAME="scratch_7 Coverage Results" MODIFIED="1576704787921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_large_instruction.coverage" NAME="Unittests for tests.PartOneTests.test_large_instruction Coverage Results" MODIFIED="1576705935479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day05" />
     <SUITE FILE_PATH="coverage/advent_of_code$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1576710775713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day06" />
-    <SUITE FILE_PATH="coverage/advent_of_code$main.coverage" NAME="main Coverage Results" MODIFIED="1576720722798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day05" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_position_mode.coverage" NAME="Unittests for tests.PartOneTests.test_position_mode Coverage Results" MODIFIED="1576705585764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day05" />
+    <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_get_max_thruster_signal.coverage" NAME="Unittests for tests.PartOneTests.test_get_max_thruster_signal Coverage Results" MODIFIED="1576722989988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
+    <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests.coverage" NAME="Unittests for tests.PartOneTests Coverage Results" MODIFIED="1576721791134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
+    <SUITE FILE_PATH="coverage/advent_of_code$scratch_7.coverage" NAME="scratch_7 Coverage Results" MODIFIED="1576704787921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/advent_of_code$main.coverage" NAME="main Coverage Results" MODIFIED="1576720722798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day05" />
+    <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_get_thruster_signal.coverage" NAME="Unittests for tests.PartOneTests.test_get_thruster_signal Coverage Results" MODIFIED="1576722802143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_immediate_mode.coverage" NAME="Unittests for tests.PartOneTests.test_immediate_mode Coverage Results" MODIFIED="1576705363484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day05" />
   </component>
 </project>
