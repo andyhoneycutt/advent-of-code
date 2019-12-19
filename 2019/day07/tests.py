@@ -1,6 +1,7 @@
 from unittest import TestCase
 
-from day07.main import get_max_thruster_signal, get_thruster_signal
+from day07.main import get_max_thruster_signal, get_thruster_signal, \
+    get_thruster_signal_feedback
 
 
 class PartOneTests(TestCase):
@@ -45,14 +46,10 @@ class PartTwoTest(TestCase):
 
     def test_get_thruster_signal(self):
         self.assertEqual(
-            139629729, get_thruster_signal(
-                self.a, [9, 8, 7, 6, 5], feedback=True
-            )
+            139629729, get_thruster_signal_feedback(self.a, [9, 8, 7, 6, 5]),
         )
         self.assertEqual(
-            18216, get_thruster_signal(
-                self.b, [9, 7, 8, 5, 6], feedback=True
-            ),
+            18216, get_thruster_signal_feedback(self.b, [9, 7, 8, 5, 6]),
         )
 
     pass

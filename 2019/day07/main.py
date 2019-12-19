@@ -29,6 +29,16 @@ def get_thruster_signal(inst, phase, copy_sequence=True):
     return thrust
 
 
+def get_thruster_signal_feedback(inst, phase):
+    amps = [list(inst) for _ in range(5)]
+    thrust = 0
+    for amp in amps:
+        thrust = get_thruster_signal(amp, phase, copy_sequence=False)
+    for amp in amps:
+        thrust = run(amp, thrust)
+    return thrust
+
+
 def get_max_thruster_signal(sequence: list, signal_range: range) -> int:
     signals = get_signals(signal_range)
     max_signal = 0
