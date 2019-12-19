@@ -25,14 +25,22 @@ def load_image(pixels, width, height):
     return layers
 
 
+def get_layer_count_entry(layer, entry):
+    return sum([h.count(entry) for h in layer])
+
+
 def get_layer_fewest_entry(layers, entry=0):
     counts = []
     for layer in layers:
-        counts.append(sum([h.count(entry) for h in layer]))
+        counts.append(get_layer_count_entry(layer, entry))
     min_count = min(counts)
     for i, c in enumerate(counts):
         if c == min_count:
             return i
+
+
+def get_layer_multiply_entries(layer, a, b):
+    return get_layer_count_entry(layer, a) * get_layer_count_entry(layer, b)
 
 
 def part_one():
