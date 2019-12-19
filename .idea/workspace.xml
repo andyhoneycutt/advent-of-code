@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8e07f141-cb3b-4cae-8fcd-e89ae6077253" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/day08/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day08/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/day08/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day08/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/advent-of-code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/advent-of-code.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +40,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543947414976" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/2019/util.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/2019" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -160,9 +160,9 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.layne" />
       <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_get_layer_count_entry" />
       <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_get_layer_multiply_entries" />
-      <item itemvalue="Python.layne" />
       <item itemvalue="Python tests.Unittests for tests.PartOneTests" />
     </list>
     <recent_temporary>
@@ -206,6 +206,7 @@
       <workItem from="1576703196647" duration="8385000" />
       <workItem from="1576720297222" duration="8025000" />
       <workItem from="1576764440525" duration="4339000" />
+      <workItem from="1576778888340" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="update project">
       <created>1543947249783</created>
@@ -580,9 +581,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="753" y="277" width="471" height="550" key="RollbackChangesDialog/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576768519040" />
-    <state x="482" y="187" width="1024" height="845" key="SettingsEditor" timestamp="1576723577256">
+    <state x="482" y="187" width="1024" height="845" key="SettingsEditor" timestamp="1576778906254">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1576778906253" />
     <state x="482" y="187" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576723577256" />
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576768785769">
       <screen x="67" y="27" width="1853" height="1053" />
