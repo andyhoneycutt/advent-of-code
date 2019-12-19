@@ -29,7 +29,10 @@ def get_layer_fewest_entry(layers, entry=0):
     counts = []
     for layer in layers:
         counts.append(sum([h.count(entry) for h in layer]))
-    return sorted(counts)[0]
+    min_count = min(counts)
+    for i, c in enumerate(counts):
+        if c == min_count:
+            return i
 
 
 def part_one():

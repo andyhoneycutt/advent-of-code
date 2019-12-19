@@ -4,7 +4,6 @@
     <list default="true" id="8e07f141-cb3b-4cae-8fcd-e89ae6077253" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2019/day08/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day08/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/day08/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day08/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +197,7 @@
       <workItem from="1576700359943" duration="1284000" />
       <workItem from="1576703196647" duration="8385000" />
       <workItem from="1576720297222" duration="8025000" />
-      <workItem from="1576764440525" duration="2494000" />
+      <workItem from="1576764440525" duration="2756000" />
     </task>
     <task id="LOCAL-00001" summary="update project">
       <created>1543947249783</created>
@@ -431,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576766529003</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="rearrange tests, add test for getting fewest count of entry">
+      <created>1576766950784</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1576766950784</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +446,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="day 7 part 1 solution" />
     <MESSAGE value="day 7 part 2 solution (broken)" />
     <MESSAGE value="day 8 part 1" />
     <MESSAGE value="remove pprint" />
@@ -465,7 +470,8 @@
     <MESSAGE value="changes to main signal function" />
     <MESSAGE value="set up day 8 part 1" />
     <MESSAGE value="build load image function" />
-    <option name="LAST_COMMIT_MESSAGE" value="build load image function" />
+    <MESSAGE value="rearrange tests, add test for getting fewest count of entry" />
+    <option name="LAST_COMMIT_MESSAGE" value="rearrange tests, add test for getting fewest count of entry" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="274" width="436" height="556" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1576765265015">
@@ -476,10 +482,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="861" y="256" width="254" height="593" key="#xdebugger.evaluate/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576727506624" />
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576766528933">
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576766950715">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766528933" />
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766950715" />
     <state x="167" y="125" width="1653" height="855" key="DiffContextDialog" timestamp="1576722532946">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -488,22 +494,22 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="771" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576765263981" />
-    <state width="1807" height="277" key="GridCell.Tab.0.bottom" timestamp="1576766936046">
+    <state width="1807" height="277" key="GridCell.Tab.0.bottom" timestamp="1576767199315">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="277" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766936046" />
-    <state width="1807" height="277" key="GridCell.Tab.0.center" timestamp="1576766936046">
+    <state width="1807" height="277" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576767199315" />
+    <state width="1807" height="277" key="GridCell.Tab.0.center" timestamp="1576767199315">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="277" key="GridCell.Tab.0.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766936046" />
-    <state width="1807" height="277" key="GridCell.Tab.0.left" timestamp="1576766936046">
+    <state width="1807" height="277" key="GridCell.Tab.0.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576767199315" />
+    <state width="1807" height="277" key="GridCell.Tab.0.left" timestamp="1576767199315">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="277" key="GridCell.Tab.0.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766936046" />
-    <state width="1807" height="277" key="GridCell.Tab.0.right" timestamp="1576766936046">
+    <state width="1807" height="277" key="GridCell.Tab.0.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576767199315" />
+    <state width="1807" height="277" key="GridCell.Tab.0.right" timestamp="1576767199315">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="277" key="GridCell.Tab.0.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766936046" />
+    <state width="1807" height="277" key="GridCell.Tab.0.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576767199315" />
     <state width="1807" height="343" key="GridCell.Tab.1.bottom" timestamp="1576766927390">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -552,13 +558,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/2019/day08/main.py</url>
-          <line>48</line>
+          <line>51</line>
           <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/2019/day08/main.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -592,7 +593,7 @@
     <SUITE FILE_PATH="coverage/advent_of_code$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1576710775713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day06" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartTwoTest_test_get_thruster_signal.coverage" NAME="Unittests for tests.PartTwoTest.test_get_thruster_signal Coverage Results" MODIFIED="1576727931175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_position_mode.coverage" NAME="Unittests for tests.PartOneTests.test_position_mode Coverage Results" MODIFIED="1576705585764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day05" />
-    <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_get_layer_fewest_entry.coverage" NAME="Unittests for tests.PartOneTests.test_get_layer_fewest_entry Coverage Results" MODIFIED="1576766936029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day08" />
+    <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_get_layer_fewest_entry.coverage" NAME="Unittests for tests.PartOneTests.test_get_layer_fewest_entry Coverage Results" MODIFIED="1576767199296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day08" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_get_max_thruster_signal.coverage" NAME="Unittests for tests.PartOneTests.test_get_max_thruster_signal Coverage Results" MODIFIED="1576723185425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests.coverage" NAME="Unittests for tests.PartOneTests Coverage Results" MODIFIED="1576764756274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
     <SUITE FILE_PATH="coverage/advent_of_code$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1576723091535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
