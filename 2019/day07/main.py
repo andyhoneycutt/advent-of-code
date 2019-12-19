@@ -1,6 +1,6 @@
 from itertools import permutations
 
-from intcode import run
+from intcode import run, read_input, input_to_codes
 
 
 def get_digits(i):
@@ -37,8 +37,8 @@ def get_max_thruster_signal(sequence):
     return max_signal
 
 
-def part_one():
-    pass
+def part_one(inst):
+    print(get_max_thruster_signal(list(inst)))
 
 
 def part_two():
@@ -46,5 +46,6 @@ def part_two():
 
 
 if __name__ == '__main__':
-    part_one()
-    part_two()
+    instructions = input_to_codes(read_input('input.txt'))
+    part_one(instructions)
+    part_two(instructions)
