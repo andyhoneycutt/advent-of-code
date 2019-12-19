@@ -43,8 +43,11 @@ def get_layer_multiply_entries(layer, a, b):
     return get_layer_count_entry(layer, a) * get_layer_count_entry(layer, b)
 
 
-def part_one():
-    pass
+def part_one(layers):
+    index = get_layer_fewest_entry(layers, 0)
+    result = get_layer_multiply_entries(layers[index], 1, 2)
+    print(result)
+    return result
 
 
 def part_two():
@@ -57,5 +60,5 @@ if __name__ == '__main__':
         IMAGE_WIDTH,
         IMAGE_HEIGHT,
     )
-    part_one()
+    part_one(image)
     part_two()
