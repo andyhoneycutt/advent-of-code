@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from day05.main import run
+from intcode import run
 
 
 class PartOneTests(TestCase):

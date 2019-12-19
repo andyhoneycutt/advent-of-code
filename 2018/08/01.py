@@ -1,4 +1,5 @@
 import functions
+import intcode
 
 
 class Node:
@@ -35,7 +36,7 @@ class Node:
                 # missing children are ignored
                 try:
                     n = self.children[index - 1]
-                    value += n.get_value()
+                    value += intcode.get_value()
                 except IndexError:
                     pass
         return value
@@ -71,7 +72,7 @@ def main(node):
 
 
 def main_two(node):
-    return node.get_value()
+    return intcode.get_value()
 
 
 if __name__ == '__main__':
