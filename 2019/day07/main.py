@@ -15,12 +15,11 @@ def list_to_int(lst: list) -> int:
     return int(''.join(lst))
 
 
-def get_thruster_signal(instructions, phase):
+def get_thruster_signal(inst, phase):
     p = iter(phase)
     c = next(p), 0
     for i in range(5):
-        inst = list(instructions)
-        thrust = run(inst, iter(c))
+        thrust = run(list(inst), iter(c))
         try:
             c = next(p), thrust
         except StopIteration:
