@@ -25,6 +25,13 @@ def load_image(pixels, width, height):
     return layers
 
 
+def get_layer_fewest_entry(layers, entry=0):
+    counts = []
+    for layer in layers:
+        counts.append(sum([h.count(entry) for h in layer]))
+    return sorted(counts)[0]
+
+
 def part_one():
     pass
 

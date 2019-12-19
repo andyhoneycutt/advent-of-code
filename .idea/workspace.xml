@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e07f141-cb3b-4cae-8fcd-e89ae6077253" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/2019/util.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/day05/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day05/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/day07/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day07/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2019/day08/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day08/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2019/day08/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/day08/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/intcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/2019/intcode.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +68,7 @@
       <recent name="$PROJECT_DIR$/2018" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for tests.PartOneTests.test_load_image">
+  <component name="RunManager" selected="Python tests.Unittests for tests.PartOneTests.test_get_layer_fewest_entry">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="advent-of-code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -110,6 +106,21 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for tests.PartOneTests.test_get_layer_fewest_entry" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2019/day08" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.PartOneTests.test_get_layer_fewest_entry&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for tests.PartOneTests.test_load_image" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -122,21 +133,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;tests.PartOneTests.test_load_image&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for tests.PartTwoTest.test_get_thruster_signal" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2019/day07" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.PartTwoTest.test_get_thruster_signal&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -157,18 +153,18 @@
     </configuration>
     <list>
       <item itemvalue="Python tests.Unittests for tests.PartOneTests" />
-      <item itemvalue="Python tests.Unittests for tests.PartTwoTest.test_get_thruster_signal" />
       <item itemvalue="Python tests.Unittests for tests.PartTwoTest.test_get_thruster_signal_feedback" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_load_image" />
+      <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_get_layer_fewest_entry" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_get_layer_fewest_entry" />
         <item itemvalue="Python tests.Unittests for tests.PartOneTests.test_load_image" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python tests.Unittests for tests.PartTwoTest.test_get_thruster_signal_feedback" />
         <item itemvalue="Python tests.Unittests for tests.PartOneTests" />
-        <item itemvalue="Python tests.Unittests for tests.PartTwoTest.test_get_thruster_signal" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +198,7 @@
       <workItem from="1576700359943" duration="1284000" />
       <workItem from="1576703196647" duration="8385000" />
       <workItem from="1576720297222" duration="8025000" />
-      <workItem from="1576764440525" duration="2074000" />
+      <workItem from="1576764440525" duration="2494000" />
     </task>
     <task id="LOCAL-00001" summary="update project">
       <created>1543947249783</created>
@@ -428,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576765109142</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="build load image function">
+      <created>1576766529003</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1576766529003</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +440,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="one pass" />
     <MESSAGE value="day 7 part 1 solution" />
     <MESSAGE value="day 7 part 2 solution (broken)" />
     <MESSAGE value="day 8 part 1" />
@@ -462,7 +464,8 @@
     <MESSAGE value="broken commit" />
     <MESSAGE value="changes to main signal function" />
     <MESSAGE value="set up day 8 part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="set up day 8 part 1" />
+    <MESSAGE value="build load image function" />
+    <option name="LAST_COMMIT_MESSAGE" value="build load image function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="274" width="436" height="556" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1576765265015">
@@ -473,10 +476,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="861" y="256" width="254" height="593" key="#xdebugger.evaluate/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576727506624" />
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576765109028">
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576766528933">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576765109028" />
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766528933" />
     <state x="167" y="125" width="1653" height="855" key="DiffContextDialog" timestamp="1576722532946">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -485,38 +488,38 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="771" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576765263981" />
-    <state width="1807" height="343" key="GridCell.Tab.0.bottom" timestamp="1576766520024">
+    <state width="1807" height="277" key="GridCell.Tab.0.bottom" timestamp="1576766936046">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766520024" />
-    <state width="1807" height="343" key="GridCell.Tab.0.center" timestamp="1576766520023">
+    <state width="1807" height="277" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766936046" />
+    <state width="1807" height="277" key="GridCell.Tab.0.center" timestamp="1576766936046">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.0.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766520023" />
-    <state width="1807" height="343" key="GridCell.Tab.0.left" timestamp="1576766520023">
+    <state width="1807" height="277" key="GridCell.Tab.0.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766936046" />
+    <state width="1807" height="277" key="GridCell.Tab.0.left" timestamp="1576766936046">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.0.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766520023" />
-    <state width="1807" height="343" key="GridCell.Tab.0.right" timestamp="1576766520023">
+    <state width="1807" height="277" key="GridCell.Tab.0.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766936046" />
+    <state width="1807" height="277" key="GridCell.Tab.0.right" timestamp="1576766936046">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.0.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766520023" />
-    <state width="1807" height="343" key="GridCell.Tab.1.bottom" timestamp="1576766520024">
+    <state width="1807" height="277" key="GridCell.Tab.0.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766936046" />
+    <state width="1807" height="343" key="GridCell.Tab.1.bottom" timestamp="1576766927390">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766520024" />
-    <state width="1807" height="343" key="GridCell.Tab.1.center" timestamp="1576766520024">
+    <state width="1807" height="343" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766927390" />
+    <state width="1807" height="343" key="GridCell.Tab.1.center" timestamp="1576766927390">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.1.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766520024" />
-    <state width="1807" height="343" key="GridCell.Tab.1.left" timestamp="1576766520024">
+    <state width="1807" height="343" key="GridCell.Tab.1.center/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766927390" />
+    <state width="1807" height="343" key="GridCell.Tab.1.left" timestamp="1576766927390">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.1.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766520024" />
-    <state width="1807" height="343" key="GridCell.Tab.1.right" timestamp="1576766520024">
+    <state width="1807" height="343" key="GridCell.Tab.1.left/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766927390" />
+    <state width="1807" height="343" key="GridCell.Tab.1.right" timestamp="1576766927390">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="343" key="GridCell.Tab.1.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766520024" />
+    <state width="1807" height="343" key="GridCell.Tab.1.right/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576766927390" />
     <state x="482" y="187" width="1024" height="845" key="SettingsEditor" timestamp="1576723577256">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -549,30 +552,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/2019/day08/main.py</url>
-          <line>41</line>
+          <line>48</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/2019/day08/main.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="25" />
+          <line>31</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
-        <watch expression="get_value(mode1, a, codes)" language="Python" />
-        <watch expression="a" language="Python" />
-        <watch expression="v" language="Python" />
-        <watch expression="satellite in v" language="Python" />
-        <watch expression="'SAN' in v" language="Python" />
-        <watch expression="hasattr(user_input, '__iter__')" language="Python" />
-        <watch expression="dir(user_input)" language="Python" />
-        <watch expression="list(p)" language="Python" />
-        <watch expression="val == 139629729" language="Python" />
-        <watch expression="99 in amps[1]" language="Python" />
-        <watch expression="list(user_input)" language="Python" />
-        <watch expression="amps[0] == inst" language="Python" />
+        <watch expression="sorted(counts)[0]" language="Python" />
       </configuration>
       <configuration name="PythonConfigurationType">
         <watch expression="nodes" language="Python" />
@@ -600,6 +592,7 @@
     <SUITE FILE_PATH="coverage/advent_of_code$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1576710775713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day06" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartTwoTest_test_get_thruster_signal.coverage" NAME="Unittests for tests.PartTwoTest.test_get_thruster_signal Coverage Results" MODIFIED="1576727931175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_position_mode.coverage" NAME="Unittests for tests.PartOneTests.test_position_mode Coverage Results" MODIFIED="1576705585764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day05" />
+    <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_get_layer_fewest_entry.coverage" NAME="Unittests for tests.PartOneTests.test_get_layer_fewest_entry Coverage Results" MODIFIED="1576766936029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day08" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests_test_get_max_thruster_signal.coverage" NAME="Unittests for tests.PartOneTests.test_get_max_thruster_signal Coverage Results" MODIFIED="1576723185425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
     <SUITE FILE_PATH="coverage/advent_of_code$Unittests_for_tests_PartOneTests.coverage" NAME="Unittests for tests.PartOneTests Coverage Results" MODIFIED="1576764756274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
     <SUITE FILE_PATH="coverage/advent_of_code$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1576723091535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2019/day07" />
