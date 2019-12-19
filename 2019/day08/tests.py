@@ -1,6 +1,7 @@
 from unittest import TestCase
 
-from day08.main import load_image, get_layer_fewest_entry, get_layer_count_entry
+from day08.main import load_image, get_layer_fewest_entry, \
+    get_layer_count_entry, get_layer_multiply_entries
 
 
 class PartOneTests(TestCase):
@@ -33,6 +34,14 @@ class PartOneTests(TestCase):
         expected = 0
         actual = get_layer_fewest_entry(self.expected_image, 0)
         self.assertEqual(expected, actual)
+
+    def test_get_layer_multiply_entries(self):
+        a = 4
+        b = 5
+        expected = 1
+        actual = get_layer_multiply_entries(self.expected_image[0], a, b)
+        self.assertEqual(expected, actual)
+
 
 
 class PartTwoTest(TestCase):
