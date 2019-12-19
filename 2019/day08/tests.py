@@ -43,7 +43,6 @@ class PartOneTests(TestCase):
         self.assertEqual(expected, actual)
 
 
-
 class PartTwoTest(TestCase):
     def setUp(self) -> None:
         pass
