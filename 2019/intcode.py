@@ -1,8 +1,3 @@
-def read_input(filename):
-    with open(filename, 'r') as fp:
-        return fp.read()
-
-
 def input_to_codes(string):
     return [int(i) for i in string.split(',')]
 

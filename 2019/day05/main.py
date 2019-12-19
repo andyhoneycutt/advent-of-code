@@ -1,4 +1,5 @@
-from intcode import read_input, input_to_codes, run
+from intcode import input_to_codes, run
+from util import read_input
 
 
 def part_one(inst):

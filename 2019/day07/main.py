@@ -1,6 +1,7 @@
 from itertools import permutations
 
-from intcode import run, read_input, input_to_codes
+from intcode import run, input_to_codes
+from util import read_input
 
 
 def get_digits(i):
