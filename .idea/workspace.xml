@@ -203,7 +203,7 @@
       <workItem from="1576677365793" duration="6087000" />
       <workItem from="1576700359943" duration="1284000" />
       <workItem from="1576703196647" duration="8385000" />
-      <workItem from="1576720297222" duration="2881000" />
+      <workItem from="1576720297222" duration="3016000" />
     </task>
     <task id="LOCAL-00001" summary="update project">
       <created>1543947249783</created>
@@ -380,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576723116604</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fix scope issue">
+      <created>1576723194403</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1576723194403</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,17 +420,18 @@
     <MESSAGE value="move intcode to module" />
     <MESSAGE value="get passing tests for day 7 part 1" />
     <MESSAGE value="run part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="run part 1" />
+    <MESSAGE value="fix scope issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix scope issue" />
   </component>
   <component name="WindowStateProjectService">
     <state x="770" y="274" width="436" height="556" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1576720710304">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="770" y="274" width="436" height="556" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576720710304" />
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576723116533">
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2" timestamp="1576723194332">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576723116533" />
+    <state x="460" y="149" width="1057" height="807" key="CommitChangelistDialog2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576723194332" />
     <state x="167" y="125" width="1653" height="855" key="DiffContextDialog" timestamp="1576722532946">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -468,10 +476,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" width="1024" height="845" key="SettingsEditor/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576704091521" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576723141029">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576723195578">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576723141029" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1576723195578" />
     <state width="926" height="527" key="XDebugger.FullValuePopup" timestamp="1576710793951">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -486,7 +494,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/2019/day07/main.py</url>
-          <line>26</line>
+          <line>27</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

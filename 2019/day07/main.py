@@ -7,8 +7,8 @@ def get_digits(i):
     return [int(x) for x in str(i)]
 
 
-def get_signals():
-    return list(permutations(range(5)))
+def get_signals(signal_range: range):
+    return list(permutations(signal_range))
 
 
 def list_to_int(lst: list) -> int:
@@ -18,6 +18,7 @@ def list_to_int(lst: list) -> int:
 def get_thruster_signal(inst, phase):
     p = iter(phase)
     c = next(p), 0
+    thrust = 0
     for i in range(5):
         thrust = run(list(inst), iter(c))
         try:
@@ -27,8 +28,8 @@ def get_thruster_signal(inst, phase):
     return thrust
 
 
-def get_max_thruster_signal(sequence):
-    signals = get_signals()
+def get_max_thruster_signal(sequence: list, signal_range: range) -> int:
+    signals = get_signals(signal_range)
     max_signal = 0
     for phase in signals:
         signal = get_thruster_signal(list(sequence), phase)
@@ -37,7 +38,7 @@ def get_max_thruster_signal(sequence):
 
 
 def part_one(inst):
-    print(get_max_thruster_signal(list(inst)))
+    print(get_max_thruster_signal(list(inst), signal_range=range(5)))
 
 
 def part_two():
