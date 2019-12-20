@@ -65,9 +65,7 @@ def merge_image(layer, i_layers, w, h):
 
 def print_image(output):
     for r in output:
-        for p in r:
-            o = p == '1' and '[]' or '  '
-            print(o, end='')
+        [print(p == '1' and '[]' or '  ', end='') for p in r]
         print('\n', end='')
 
 
