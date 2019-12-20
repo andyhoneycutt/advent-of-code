@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/2018" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/2019" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6 (aoc2019)" jdkType="Python SDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

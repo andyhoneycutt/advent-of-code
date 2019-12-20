@@ -1,4 +1,5 @@
 import util
+from helpers import flatten
 
 IMAGE_WIDTH = 25
 IMAGE_HEIGHT = 6
@@ -49,6 +50,26 @@ def part_one(layers):
     result = multiply_entries(layers[index], 1, 2)
     print(result)
     return result
+
+
+def flatten_layers(layers):
+    output = []
+    for layer in layers:
+        a = flatten(layer)
+        output.append(a)
+    return output
+
+
+def merge_layers(layers):
+    merged = []
+    for layer in flatten_layers(layers):
+        if not merged:
+            merged = layer
+        else:
+            for i, m in enumerate(merged):
+                if m == 2:
+                    merged[i] = layer[i]
+    return merged
 
 
 def part_two():
