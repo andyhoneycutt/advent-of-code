@@ -51,6 +51,7 @@ def part_one(layers):
     return result
 
 
+# TODO: because this works with strings, can probably be a list comprehension
 def merge_image(layer, i_layers, w, h):
     try:
         next_layer = next(i_layers)
