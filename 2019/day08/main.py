@@ -63,16 +63,20 @@ def merge_image(layer, i_layers, w, h):
     return merge_image(layer, i_layers, w, h)
 
 
-@util.time_fn
-def part_two(layers):
-    layer = get_layer(IMAGE_WIDTH, IMAGE_HEIGHT, initial='2')
-    i_layers = iter(layers)
-    output = merge_image(layer, i_layers, IMAGE_WIDTH, IMAGE_HEIGHT)
+def print_image(output):
     for r in output:
         for p in r:
             o = p == '1' and '[]' or '  '
             print(o, end='')
         print('\n', end='')
+
+
+@util.time_fn
+def part_two(layers):
+    layer = get_layer(IMAGE_WIDTH, IMAGE_HEIGHT, initial='2')
+    i_layers = iter(layers)
+    output = merge_image(layer, i_layers, IMAGE_WIDTH, IMAGE_HEIGHT)
+    print_image(output)
     return output
 
 
