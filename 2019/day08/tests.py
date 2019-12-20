@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from day08.main import load_image, get_layer_fewest_entry, \
-    get_layer_count_entry, multiply_entries, flatten_layers, merge_layers
+    get_layer_count_entry, multiply_entries, merge_image
 
 
 class PartOneTests(TestCase):
@@ -46,21 +46,20 @@ class PartOneTests(TestCase):
 class PartTwoTest(TestCase):
     def setUp(self) -> None:
         self.image = [
-            [[0, 2], [2, 2]],
-            [[1, 1], [2, 2]],
-            [[2, 2], [1, 2]],
-            [[0, 0], [0, 0]]
+            [['0', '2'], ['2', '2']],
+            [['1', '1'], ['2', '2']],
+            [['2', '2'], ['1', '2']],
+            [['0', '0'], ['0', '0']],
         ]
 
-    def test_flatten_layers(self):
+    def test_merge_image(self):
         expected = [
-            [0, 2, 2, 2],
-            [1, 1, 2, 2],
-            [2, 2, 1, 2],
-            [0, 0, 0, 0],
+            ['0', '1'],
+            ['1', '0'],
         ]
-        self.assertEqual(expected, flatten_layers(self.image))
-
-    def test_merge_layers(self):
-        expected = [0, 1, 1, 0]
-        self.assertEqual(expected, merge_layers(self.image))
+        layer = [['2', '2'], ['2', '2']]
+        i_layers = iter(self.image)
+        w = 2
+        h = 2
+        actual = merge_image(layer, i_layers, w, h)
+        self.assertEqual(expected, actual)

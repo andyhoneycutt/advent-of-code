@@ -1,12 +1,11 @@
 import util
-from helpers import flatten
 
 IMAGE_WIDTH = 25
 IMAGE_HEIGHT = 6
 
 
-def get_layer(width, height):
-    return [list(None for _ in range(width)) for _ in range(height)]
+def get_layer(width, height, initial=None):
+    return [list(initial for _ in range(width)) for _ in range(height)]
 
 
 def load_image(pixels, width, height):
@@ -52,28 +51,29 @@ def part_one(layers):
     return result
 
 
-def flatten_layers(layers):
-    output = []
-    for layer in layers:
-        a = flatten(layer)
-        output.append(a)
+def merge_image(layer, i_layers, w, h):
+    try:
+        next_layer = next(i_layers)
+    except StopIteration:
+        return layer
+    for r, l_w in enumerate(layer):
+        for p, l_h in enumerate(l_w):
+            if layer[r][p] == '2':
+                layer[r][p] = next_layer[r][p]
+    return merge_image(layer, i_layers, w, h)
+
+
+@util.time_fn
+def part_two(layers):
+    layer = get_layer(IMAGE_WIDTH, IMAGE_HEIGHT, initial='2')
+    i_layers = iter(layers)
+    output = merge_image(layer, i_layers, IMAGE_WIDTH, IMAGE_HEIGHT)
+    for r in output:
+        for p in r:
+            o = p == '1' and '[]' or '  '
+            print(o, end='')
+        print('\n', end='')
     return output
-
-
-def merge_layers(layers):
-    merged = []
-    for layer in flatten_layers(layers):
-        if not merged:
-            merged = layer
-        else:
-            for i, m in enumerate(merged):
-                if m == 2:
-                    merged[i] = layer[i]
-    return merged
-
-
-def part_two():
-    pass
 
 
 if __name__ == '__main__':
@@ -83,4 +83,11 @@ if __name__ == '__main__':
         IMAGE_HEIGHT,
     )
     part_one(image)
-    part_two()
+
+    # TODO: Determine why this doesn't work with integers
+    image_two = load_image(
+        util.read_input('input.txt'),
+        IMAGE_WIDTH,
+        IMAGE_HEIGHT,
+    )
+    part_two(image_two)
