@@ -1,3 +1,6 @@
+import time
+
+
 def part_one(pings):
     total = 0
     for i, value in enumerate(pings):
@@ -17,9 +20,13 @@ def part_two(pings):
 
 
 if __name__ == '__main__':
+    start = time.time()
     with open('input.txt', 'r') as fp:
         values = [int(ln) for ln in fp.readlines()]
         one = part_one(values)
         two = part_two(values)
         print(one)
         print(two)
+    end = time.time()
+    tot = end - start
+    print(f'Completed in {tot:.6f} seconds')
