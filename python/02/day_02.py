@@ -28,14 +28,30 @@ class Submarine:
         self.horizontal += val
 
 
+class SubPartTwo(Submarine):
+    aim: int = 0
+
+    def up(self, val):
+        self.aim -= val
+
+    def down(self, val):
+        self.aim += val
+
+    def forward(self, val):
+        self.horizontal += val
+        self.depth += self.aim * val
+
+
 def part_one(inputs):
     submarine = Submarine(inputs)
     submarine.run()
     return submarine.horizontal * submarine.depth
 
 
-def part_two():
-    pass
+def part_two(inputs):
+    submarine = SubPartTwo(inputs)
+    submarine.run()
+    return submarine.horizontal * submarine.depth
 
 
 if __name__ == '__main__':
@@ -43,11 +59,12 @@ if __name__ == '__main__':
     with open('input.txt', 'r') as fp:
         values = []
         for line in fp.readlines():
-            cmd, val = line.split(' ')
-            values.append((cmd, int(val)))
+            c, value = line.split(' ')
+            values.append((c, int(value)))
         one = part_one(values)
         print(one)
-        part_two()
+        two = part_two(values)
+        print(two)
     end = time.time()
     tot = end - start
     print(f'Completed in {tot:.6f} seconds')
