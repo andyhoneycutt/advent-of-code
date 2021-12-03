@@ -2,20 +2,10 @@ import time
 from collections import Counter
 
 
-def get_ordered_groups(inputs):
-    groups = []
-    for x in range(12):
-        group = []
-        for diagnostic in inputs:
-            group.append(diagnostic[x])
-        groups.append(group)
-    return groups
-
-
 def part_one(inputs):
     _gamma = []
     _epsilon = []
-    groups = get_ordered_groups(inputs)
+    groups = zip(*inputs)
 
     for g in groups:
         common, _ = Counter(g).most_common()[0]
@@ -54,7 +44,7 @@ def part_two(inputs):
 
 def main():
     with open('input.txt', 'r') as fp:
-        diagnostics = [l.strip() for l in fp.readlines()]
+        diagnostics = [l.strip() for l in fp]
         one = part_one(diagnostics)
         print(one)
         two = part_two(diagnostics)
