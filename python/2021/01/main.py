@@ -21,7 +21,7 @@ def part_two(pings):
 
 def main():
     with open('input.txt', 'r') as fp:
-        values = [int(ln) for ln in fp.readlines()]
+        values = [int(ln) for ln in fp]
         one = part_one(values)
         two = part_two(values)
         print(one)

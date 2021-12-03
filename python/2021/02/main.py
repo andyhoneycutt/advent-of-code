@@ -57,7 +57,7 @@ def part_two(inputs):
 def main():
     with open('input.txt', 'r') as fp:
         values = []
-        for line in fp.readlines():
+        for line in fp:
             c, value = line.split(' ')
             values.append((c, int(value)))
         one = part_one(values)
