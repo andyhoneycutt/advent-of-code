@@ -33,8 +33,8 @@ def _get_life(diags, bit=0, weight='1', less='0'):
     toggled = [i[bit] for i in diags]
     ones = toggled.count('1')
     zeroes = toggled.count('0')
-    most_common = weight if ones > zeroes else weight if ones == zeroes else less
-    bits = [b for b in diags if b[bit] == most_common]
+    selected = weight if ones > zeroes else weight if ones == zeroes else less
+    bits = [b for b in diags if b[bit] == selected]
     return _get_life(bits, bit=bit + 1, weight=weight, less=less)
 
 
