@@ -54,8 +54,7 @@ def part_two(inputs):
     return submarine.horizontal * submarine.depth
 
 
-if __name__ == '__main__':
-    start = time.time()
+def main():
     with open('input.txt', 'r') as fp:
         values = []
         for line in fp.readlines():
@@ -65,6 +64,11 @@ if __name__ == '__main__':
         print(one)
         two = part_two(values)
         print(two)
+
+
+if __name__ == '__main__':
+    start = time.time()
+    main()
     end = time.time()
     tot = end - start
     print(f'Completed in {tot:.6f} seconds')
