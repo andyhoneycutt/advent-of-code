@@ -49,9 +49,12 @@ def calc_fish_big(fish, days=80):
         for val in range(1, 9):
             prev = val - 1
             new_pond[prev] = pond.get(val, 0)
+        # Each day, a 0 becomes a 6 and adds a new 8 to the end of the list
         if 0 in pond:
             add_fish = pond[0]
+            # The new lanternfish starts with an internal timer of 8
             new_pond[8] = add_fish
+            # A lanternfish that creates a new fish resets its timer to 6
             new_pond[6] = new_pond.get(6, 0) + add_fish
         pond = new_pond
     counts = [v for k, v in pond.items()]
