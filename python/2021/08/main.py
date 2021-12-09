@@ -37,60 +37,12 @@ BINARY_DECODER = {
 
 UNIQUE_LENGTHS = [2, 3, 4, 7]
 
+
 def part_one(inputs):
     c = 0
     for a, b in inputs:
         c += sum([1 for x in b if len(x) in UNIQUE_LENGTHS])
     return c
-
-
-def remove_bits(segment, decoded):
-    return set(segment) - set(decoded)
-
-
-def get_transposer_key(segment, transposer):
-    segment_length = len(segment)
-    # transposer has uniques filled in
-    if not all([transposer[i] for i in UNIQUE_LENGTHS]):
-        for k, v in DECODER.items():
-            if segment_length in UNIQUE_LENGTHS and sum(v) == segment_length:
-                return k
-    if len(remove_bits(segment, transposer[1])) == 3:
-        return 3
-    if len(remove_bits(segment, transposer[7])) == 4:
-        return 6
-    if len(segment) == 6:
-        if len(remove_bits(segment, transposer[4])) == 3:
-            return 0
-        return 9
-    if len(remove_bits(segment, transposer[4])) == 3:
-        return 2
-    return 5
-
-
-def decode_segments(segments, transposer=None):
-    try:
-        segment = next(segments)
-    except StopIteration:
-        return transposer
-    transposer = transposer or {x: None for x in range(10)}
-    key = get_transposer_key(segment, transposer)
-    transposer[key] = segment
-    return decode_segments(segments, transposer)
-
-
-def part_two(inputs):
-    total = 0
-    debug = []
-    for a, b in inputs:
-        s1 = set([x for x in a if len(x) in UNIQUE_LENGTHS])
-        s2 = set(a) - s1
-        decoder = decode_segments(iter([*s1, *s2]))
-        value_map = {''.join(sorted(v)): k for k, v in decoder.items() if v}
-        output = int(''.join([str(value_map[''.join(sorted(c))]) for c in b]))
-        total += output
-        debug.append(output)
-    return total, debug
 
 
 def b_to_i(binary):
@@ -123,8 +75,6 @@ def get_bits(segments, bases):
     c = _7 - (a | f)
     d = _4 - (b | c | f)
     g = _8 - (a | b | c | d | e | f)
-    assert b == _8 - (a | c | d | e | f | g), \
-        f'{b} != {_8 - (a | c | d | e | f | g)}/{_8}'
     return a, b, c, d, e, f, g
 
 
@@ -161,13 +111,8 @@ def main():
         ]
         one = part_one(initial)
         print(one)
-        two, d1 = part_two(initial)
+        two, _ = part_two_b(initial)
         print(two)
-        two_b, d2 = part_two_b(initial)
-        assert d1 == d2, f'{[i for i in d1 if i not in d2]}'
-        assert two_b == two, f"{two_b} != {two}"
-        print(two_b)
-
 
 
 if __name__ == '__main__':
