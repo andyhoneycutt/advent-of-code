@@ -75,10 +75,7 @@ def get_bits(segments, bases):
 
 
 def get_binary(segment, bin_map):
-    _b = 0
-    for o in segment:
-        _b = _b | bin_map[o]
-    return _b
+    return sum([bin_map[o] for o in segment])
 
 
 def part_two(inputs):
