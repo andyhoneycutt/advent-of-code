@@ -78,18 +78,23 @@ def get_binary(segment, bin_map):
     return sum([bin_map[o] for o in segment])
 
 
+def get_bin_map(bases, segments):
+    a, b, c, d, e, f, g = get_bits(segments, bases)
+    _bin_map = {
+        ''.join(k): bn
+        for k, bn in zip([a, b, c, d, e, f, g], [A, B, C, D, E, F, G])
+    }
+    return _bin_map
+
+
 def part_two(inputs):
     total = 0
     debug = []
     for segments, outputs in inputs:
         s = sorted(set([x for x in segments if len(x) in UNIQUE_LENGTHS]), key=len)
         bases = {1: s[0], 7: s[1], 4: s[2], 8: s[3]}
-        a, b, c, d, e, f, g = get_bits(segments, bases)
-        _bin_map = {
-            ''.join(k): bn
-            for k, bn in zip([a, b, c, d, e, f, g], [A, B, C, D, E, F, G])
-        }
-        number = [str(b_to_i(get_binary(o, _bin_map))) for o in outputs]
+        bin_map = get_bin_map(bases, segments)
+        number = [str(b_to_i(get_binary(o, bin_map))) for o in outputs]
         n = int(''.join(number))
         debug.append(n)
         total += n
