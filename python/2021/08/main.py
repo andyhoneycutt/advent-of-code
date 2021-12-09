@@ -99,7 +99,7 @@ def part_two(inputs):
 def main():
     with open('input.txt', 'r') as fp:
         initial = [
-            (a.strip().split(), b.strip().split(' '))
+            (a.strip().split(), b.strip().split())
             for a, b in [ln.split('|') for ln in fp]
         ]
         one = part_one(initial)
