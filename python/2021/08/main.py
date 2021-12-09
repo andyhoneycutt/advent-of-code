@@ -52,12 +52,8 @@ def b_to_i(binary):
 
 
 def get_bits(segments, bases):
-    bin_counts = {
-        'a': 0, 'b': 0, 'c': 0, 'd': 0, 'e': 0, 'f': 0, 'g': 0,
-    }
-    for segment in segments:
-        for c in segment:
-            bin_counts[c] = bin_counts[c] + 1
+    salad = ''.join(segments)
+    bin_counts = {c: salad.count(c) for c in 'abcdefg'}
 
     # known registers
     _8 = set(bases[8])
