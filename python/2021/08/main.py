@@ -85,7 +85,7 @@ def get_binary(segment, bin_map):
     return _b
 
 
-def part_two_b(inputs):
+def part_two(inputs):
     total = 0
     debug = []
     for segments, outputs in inputs:
@@ -111,7 +111,7 @@ def main():
         ]
         one = part_one(initial)
         print(one)
-        two, _ = part_two_b(initial)
+        two, _ = part_two(initial)
         print(two)
 
 
