@@ -38,14 +38,13 @@ def part_one(inputs):
 def part_two(inputs):
     move = {
         # draw
-        'Y': lambda x: HANDS[x],
+        'Y': HANDS,
         # lose
-        'X': lambda x: LOSES[x],
+        'X': LOSES,
         # win
-        'Z': lambda x: WINS[x],
+        'Z': WINS,
     }
-    modified = [(a, move[b](a)) for a, b in inputs]
-    return score(modified)
+    return score([(a, move[b][a]) for a, b in inputs])
 
 
 def main():
