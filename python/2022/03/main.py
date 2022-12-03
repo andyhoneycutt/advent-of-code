@@ -20,20 +20,18 @@ def ascii_score(character):
 def part_one(inputs):
     rucksacks = [split_rucksack(l) for l in inputs]
     common = [in_both(*rucksack) for rucksack in rucksacks]
-    return sum([ascii_score(c) for c in common])
+    return sum(ascii_score(c) for c in common)
 
 
 def part_two(inputs):
     """ find the common letters between three rucksacks """
-    score = 0
-    for i in range(0, len(inputs), 3):
-        a, b, c = inputs[i:i + 3]
-        l = list(set(a) & set(b) & set(c))[0]
-        score += ascii_score(l)
-    return score
+    return sum(
+        ascii_score(list(set(a) & set(b) & set(c))[0])
+        for a, b, c in zip(*[iter(inputs)] * 3)
+    )
 
 
-def main():1
+def main():
     with open('input.txt', 'r', encoding="utf-8") as fp:
         values = [l.strip() for l in fp]
         one = part_one(values)
