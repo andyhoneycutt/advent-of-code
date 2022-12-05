@@ -7,7 +7,7 @@ def init_matrix(input_str):
     """ every 1+3 character is a value in a box"""
     s_boxes, moves = input_str.split("\n\n")
     boxes = s_boxes.split("\n")[::-1]
-    columns = int(boxes.pop(0).split()[-1])
+    _ = int(boxes.pop(0).split()[-1])
     stacks = defaultdict(list)
     # fill in the boxes
     for box in boxes:
