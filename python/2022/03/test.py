@@ -12,7 +12,7 @@ INPUT = [
 ]
 
 
-class TestDay02(unittest.TestCase):
+class TestDay03(unittest.TestCase):
     def setUp(self) -> None:
         self.rucksacks = [split_rucksack(l) for l in INPUT]
         self.common = [

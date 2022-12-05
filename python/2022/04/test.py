@@ -12,7 +12,7 @@ INPUT = [
 ]
 
 
-class TestDay02(unittest.TestCase):
+class TestDay04(unittest.TestCase):
     def test_part_one(self):
         expected = 2
         actual = part_one(INPUT)
