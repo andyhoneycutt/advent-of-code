@@ -79,17 +79,14 @@ def parse_input(inputs, root):
     for line in inputs.splitlines():
         args = line.split()
         # process command
-        match args[0]:
+        match args:
             # process command, e.g. cd .., cd a, ls
-            case '$':
-                if args[1] == 'cd':
-                    current = ch_dir(tree=current, name=args[2])
-                    continue
-                if args[1] == 'ls':
-                    continue
-            case 'dir':
-                current.add_directory(name=args[1])
+            case ['$', 'cd', subdir]:
+                current = ch_dir(tree=current, name=subdir)
+            case ['$', 'ls']:
                 continue
+            case ['dir', subdir]:
+                current.add_directory(name=subdir)
             case _:
                 current.add_file(name=args[1], size=int(args[0]))
     return root
