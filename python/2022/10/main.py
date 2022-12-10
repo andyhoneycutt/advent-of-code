@@ -15,23 +15,32 @@ CMDS = {
 }
 
 
-def part_one(inputs, signals):
+def parse_input(inputs):
+    for line in inputs:
+        # command is first four characters
+        cmd = line[:4]
+        # value is everything after
+        val = int(line[4:]) if line[4:] else None
+        yield cmd, val
+
+
+def get_register(inputs):
     program = parse_input(inputs)
     register = [1]
     for cmd, val in program:
         register += CMDS[cmd](register[-1], val)
+    return register
 
+
+def part_one(inputs, signals):
+    register = get_register(inputs)
     output = sum([register[i - 1] * i for i in signals])
     return output
 
 
 def part_two(inputs):
     screen = ""
-    register = [1]
-    program = parse_input(inputs)
-
-    for cmd, val in program:
-        register += CMDS[cmd](register[-1], val)
+    register = get_register(inputs)
 
     for cycle, x in enumerate(register[:-1]):
         # is the 3 col cursor over the current X value (it can be -1, 0, or +1 from X)
@@ -49,15 +58,6 @@ def part_two(inputs):
 
     # remove new line at the end
     return screen[:-1].split("\n")
-
-
-def parse_input(inputs):
-    for line in inputs:
-        # command is first four characters
-        cmd = line[:4]
-        # value is everything after
-        val = int(line[4:]) if line[4:] else None
-        yield cmd, val
 
 
 def main():
