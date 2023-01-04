@@ -74,9 +74,13 @@ class Grid:
             (0, -1),
         )
         for d in dirs:
-            p = (y + d[0], x + d[1])
-            if p in self:
-                neighbors.append(p)
+            dy, dx = d
+            p = (y + dy, x + dx)
+            if p[0] < 0 or p[1] < 0:
+                continue
+            if p[1] >= self.width or p[0] >= self.height:
+                continue
+            neighbors.append(p)
         return neighbors
 
     def find(self, value):
@@ -84,6 +88,13 @@ class Grid:
         for point, v in self.points.items():
             if v == value:
                 return point
+
+    def find_all(self, value):
+        """Returns all points that match the given value."""
+        return [point for point, v in self.points.items() if v == value]
+
+    def __setitem__(self, point, value):
+        self.points[point] = value
 
     def __getitem__(self, point):
         return self.points[point]
