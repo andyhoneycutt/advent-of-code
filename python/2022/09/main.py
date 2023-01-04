@@ -15,7 +15,9 @@ directions = {
 
 def is_touching(a, b):
     tx, ty = a
-    return b in [(tx + dx, ty + dy) for dx, dy in directions.values()]
+    for dx, dy in directions.values():
+        if (tx + dx, ty + dy) == b:
+            return True
 
 
 def can_move(head, tail):
