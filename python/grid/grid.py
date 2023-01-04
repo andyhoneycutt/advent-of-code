@@ -50,3 +50,43 @@ class Grid:
         for _y in range(y + 1, self.height):
             neighbors.append(self.points[(_y, x)])
         return neighbors
+
+    def eight_cardinal_neighbors(self, point):
+        """Returns a list of points that are directly adjacent to the given point."""
+        y, x = point
+        neighbors = []
+        for _y in range(y - 1, y + 2):
+            for _x in range(x - 1, x + 2):
+                if (_y, _x) != (y, x):
+                    p = (y + _y, x + _x)
+                    if p in self:
+                        neighbors.append(p)
+        return neighbors
+
+    def four_cardinal_neighbors(self, point):
+        """Returns a list of points that are directly adjacent to the given point."""
+        y, x = point
+        neighbors = []
+        dirs = (
+            (1, 0),
+            (-1, 0),
+            (0, 1),
+            (0, -1),
+        )
+        for d in dirs:
+            p = (y + d[0], x + d[1])
+            if p in self:
+                neighbors.append(p)
+        return neighbors
+
+    def find(self, value):
+        """Returns the first point that matches the given value."""
+        for point, v in self.points.items():
+            if v == value:
+                return point
+
+    def __getitem__(self, point):
+        return self.points[point]
+
+    def __contains__(self, item):
+        return item in self.points
