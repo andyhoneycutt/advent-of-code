@@ -33,8 +33,8 @@ def parse_input(inputs):
 
 
 def get_grid(lines, min_xy, max_xy):
-    nx, ny = min_xy # (min_xy[0] - 1, min_xy[1] - 1)
-    mx, my = max_xy # (max_xy[0] + 1, max_xy[1] + 1)
+    nx, ny = min_xy  # (min_xy[0] - 1, min_xy[1] - 1)
+    mx, my = max_xy  # (max_xy[0] + 1, max_xy[1] + 1)
     grid = [['.' for _ in range(mx - nx + 1)] for _ in range(my + 1)]
     for line in lines:
         for point in line:
@@ -59,6 +59,7 @@ def move(grid, sand):
     except IndexError:
         return None
     return sand
+
 
 def move_sand(grid, print_grid, infinite=False):
     running = True
@@ -87,7 +88,6 @@ def move_sand(grid, print_grid, infinite=False):
                     grid[0][500] = 'o'
                     running = False
                     break
-
 
             # sand couldn't move, so it stays at rest
             if sand == before_move:
