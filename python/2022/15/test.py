@@ -50,6 +50,6 @@ class TestDay15(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_part_two(self):
-        expected = 93
+        expected = 56000011
         actual = part_two(INPUTS)
         self.assertEqual(expected, actual)
