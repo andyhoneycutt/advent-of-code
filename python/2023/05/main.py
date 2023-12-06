@@ -82,15 +82,10 @@ def part_two(inputs):
             break
         for almanac in almanacs:
             for dest, src, rng in almanac.ranges:
-                a1, a2 = strt, strt + length
-                b1, b2 = src, src + rng
-                # some of the seed range overlaps with almanac range
-                if a1 <= b2 and b1 <= a2:
-                    # get the least number in the ranges
-                    least = min(a2, b2) - max(a1, b1)
-                    strt = dest + least
+                if src <= length <= src + rng:
+                    diff = length - src
+                    length = dest + diff
                     break
-
         locations.append(strt)
     if DEBUG:
         print(locations)
