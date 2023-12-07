@@ -40,13 +40,12 @@ def replace_jokers(hand):
 
 
 def score(hand, p2=False):
-    h = set(hand)
-
     # handle jokers for part 2
     if p2 and 11 in hand:
         _hand = replace_jokers(hand)
-        h = set(_hand)
         hand = _hand
+
+    h = set(hand)
 
     match len(h):
         case 1:
