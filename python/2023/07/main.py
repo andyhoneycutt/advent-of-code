@@ -25,27 +25,28 @@ def parse(line):
     return hand, bid
 
 
+def replace_jokers(hand):
+    # find most common entry
+    c = Counter([c for c in hand if c != VALUES['J']])
+    most_common = c.most_common()
+    # if there is a tie, pick the highest value
+    try:
+        replace = max([m[0] for m in most_common if m[1] == most_common[0][1]])
+    except (IndexError, ValueError):
+        # hand full of jokers, most_common is empty
+        replace = VALUES['A']
+    _hand = [replace if c == 11 else c for c in hand]
+    return _hand
+
+
 def score(hand, p2=False):
     h = set(hand)
 
     # handle jokers for part 2
     if p2 and 11 in hand:
-        # find most common entry
-        c = Counter([c for c in hand if c != 11])
-        most_common = c.most_common()
-        # if there is a tie, pick the highest value
-        # TODO: this is probably not working as intended, probably need to look
-        #       at the next most common entry and compare that
-        try:
-            replace = max([m[0] for m in most_common if m[1] == most_common[0][1]])
-            # if all(m[1] == most_common[0][1] for m in most_common):
-            #     replace = max([m[0] for m in most_common])
-        except (IndexError, ValueError):
-            replace = VALUES['A']
-
-        _hand = [replace if c == 11 else c for c in hand]
+        _hand = replace_jokers(hand)
         h = set(_hand)
-        print(f"replaced {hand} with {_hand}")
+        hand = _hand
 
     match len(h):
         case 1:
@@ -72,8 +73,8 @@ def rank(hands, p2=False):
         _hand = hand
         if p2:
             _hand = [1 if c == 11 else c for c in hand]
-        cmp = ''.join([chr(c + 97) for c in hand])
-        scored[score(hand, p2=p2)].append((hand, bid, cmp))
+        cmp = [chr(97 + c) for c in _hand]
+        scored[score(hand, p2=p2)].append((_hand, bid, cmp))
 
     # sort each scored group by cmp
     for sc, meta in scored.items():
@@ -83,15 +84,12 @@ def rank(hands, p2=False):
     order = [FIVE, FOUR, FULL, THREE, TWO, ONE, HIGH]
     hands_remaining = len(hands)
     for o in order:
-        for meta in scored[o]:
-            winnings = meta[1] * hands_remaining
+        for hand, bid, cmp in scored[o]:
+            winnings = bid * hands_remaining
             hands_remaining -= 1
             yield winnings
 
-# 243165901 -- too high
-# 242978147 -- too low
-# 241562742
-# 241466614
+
 def part_one(inputs):
     parsed = [parse(line) for line in inputs]
     return sum(rank(parsed))
@@ -105,9 +103,9 @@ def part_two(inputs):
 def main():
     with open('input.txt', 'r', encoding="utf-8") as fp:
         lines = [s.strip() for s in fp.readlines()]
-        one = part_one(lines)
+        one = part_one(lines.copy())
         print(one)
-        two = part_two(lines)
+        two = part_two(lines.copy())
         print(two)
 
 

@@ -1,6 +1,6 @@
 import unittest
 
-from main import part_one, part_two, parse, ONE, THREE, TWO, score, rank
+from main import part_one, part_two, parse, ONE, THREE, TWO, score, rank, FOUR
 
 
 class TestDay07(unittest.TestCase):
@@ -22,14 +22,30 @@ class TestDay07(unittest.TestCase):
             TWO,
             THREE,
         ]
-        sc = [score(hand) for hand, _ in parsed]
-        actual = [s[0] for s in sc]
+        actual = [score(hand) for hand, _ in parsed]
         self.assertEqual(expected, actual)
 
     def test_rank(self):
         parsed = [parse(line) for line in self.input]
         expected = 6440
         actual = sum(rank(parsed))
+        self.assertEqual(expected, actual)
+
+    def test_part2_score(self):
+        parsed = [parse(line) for line in self.input]
+        expected = [
+            ONE,
+            FOUR,
+            TWO,
+            FOUR,
+            FOUR,
+        ]
+        actual = [score(hand, p2=True) for hand, _ in parsed]
+        self.assertEqual(expected, actual)
+    def test_part_two_score_hand(self):
+        hand = [12, 11, 11, 12, 2]
+        expected = FOUR
+        actual = score(hand, p2=True)
         self.assertEqual(expected, actual)
 
     def test_part_one(self):
