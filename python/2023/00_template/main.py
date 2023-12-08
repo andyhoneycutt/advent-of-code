@@ -11,9 +11,9 @@ def part_two(inputs):
 def main():
     with open('input.txt', 'r', encoding="utf-8") as fp:
         lines = [s.strip() for s in fp.readlines()]
-        one = part_one(lines)
+        one = part_one(lines.copy())
         print(one)
-        two = part_two(lines)
+        two = part_two(lines.copy())
         print(two)
 
 

@@ -1,5 +1,6 @@
 import time
 from dataclasses import dataclass
+from math import lcm
 from typing import Optional
 
 
@@ -13,6 +14,9 @@ class Node:
         if not isinstance(other, Node):
             return False
         return self.name == other.name and self.left.name == other.left.name and self.right.name == other.right.name
+
+    def __repr__(self):
+        return self.name
 
 
 def parse(inputs):
@@ -40,9 +44,17 @@ def link(nodes):
     return linked
 
 
+def _left(n: Node):
+    return n.left
+
+
+def _right(n: Node):
+    return n.right
+
+
 DIRS = {
-    'L': lambda n: n.left,
-    'R': lambda n: n.right,
+    'L': _left,
+    'R': _right,
 }
 
 
@@ -64,16 +76,30 @@ def part_one(inputs):
     return len(walk('AAA', 'ZZZ', path, nodes, None, []))
 
 
+def walk_two(last, path):
+    i = 0
+    pl = len(path)
+    while not last.name.endswith('Z'):
+        c = i % pl
+        last = DIRS[path[c]](last)
+        i += 1
+    return i
+
+
 def part_two(inputs):
-    return 1
+    path, nodes = parse(inputs)
+    nodes = link(nodes)
+    last = [v for k, v in nodes.items() if k.endswith('A')]
+    walked = [walk_two(n, path) for n in last]
+    return lcm(*walked)
 
 
 def main():
     with open('input.txt', 'r', encoding="utf-8") as fp:
         lines = [s.strip() for s in fp.readlines()]
-        one = part_one(lines)
+        one = part_one(lines.copy())
         print(one)
-        two = part_two(lines)
+        two = part_two(lines.copy())
         print(two)
 
 
