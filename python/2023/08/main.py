@@ -44,39 +44,13 @@ def link(nodes):
     return linked
 
 
-def _left(n: Node):
-    return n.left
-
-
-def _right(n: Node):
-    return n.right
-
-
 DIRS = {
-    'L': _left,
-    'R': _right,
+    'L': lambda n: n.left,
+    'R': lambda n: n.right,
 }
 
 
-def walk(root: str = 'AAA', last: str = 'ZZZ', path: list = None, nodes: dict = None, current: str = None,
-         walked: list = None):
-    if current is None:
-        current = root
-    if current == last:
-        return walked
-    for direction in path:
-        current = DIRS[direction](nodes[current]).name
-        walked.append(current)
-    return walk(root, last, path, nodes, current, walked)
-
-
-def part_one(inputs):
-    path, nodes = parse(inputs)
-    nodes = link(nodes)
-    return len(walk('AAA', 'ZZZ', path, nodes, None, []))
-
-
-def walk_two(last, path):
+def walk(last, path):
     i = 0
     pl = len(path)
     while not last.name.endswith('Z'):
@@ -86,11 +60,17 @@ def walk_two(last, path):
     return i
 
 
+def part_one(inputs):
+    path, nodes = parse(inputs)
+    nodes = link(nodes)
+    return walk(nodes['AAA'], path)
+
+
 def part_two(inputs):
     path, nodes = parse(inputs)
     nodes = link(nodes)
     last = [v for k, v in nodes.items() if k.endswith('A')]
-    walked = [walk_two(n, path) for n in last]
+    walked = [walk(n, path) for n in last]
     return lcm(*walked)
 
 
